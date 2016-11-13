@@ -1,0 +1,95 @@
+/* Макет */
+
+#wrapper {
+    width: 96%;    
+    max-width: 920px;
+    margin: auto;
+    padding: 2%;
+}
+
+#main {
+    width: 60%;
+    margin-right: 5%;
+    float: left;
+}        
+ 
+aside {
+    width: 35%;
+    float: right;
+}
+	 
+/* Logo  H1 */
+
+header h1 {
+    height: 98px;
+    width: 216px;
+    float: left;
+    display: block;
+    text-indent: -9999px;
+}
+	 
+/* Навигация */
+
+header nav {
+    float: right;
+    margin-top: 40px;
+}
+	 
+header nav li {
+    display: inline;
+    margin-left: 15px;
+}
+
+header nav ul li a {
+    text-decoration:none;
+    color:#333;
+}
+	 
+#skipTo {
+    display: none;
+}
+
+#skipTo li {
+    background: #ccc;
+}
+	 
+/* Главная картинка*/    
+
+#banner {
+    float: left;
+    margin-bottom: 15px;
+    width: 100%;
+}
+	 
+#banner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Медиа-запросы */
+
+@media screen and (max-width: 480px) {
+	 
+#skipTo {
+    display: block;
+}
+	 
+header nav, #main, aside {
+    float: left;
+    clear: left;
+    margin: 0 0 10px; 
+    width: 100%;
+}    
+
+header nav li {
+    margin: 0;
+    background: #ccc;
+    display: block;
+    margin-bottom: 3px;
+}
+
+header nav a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
