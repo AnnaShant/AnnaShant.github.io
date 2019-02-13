@@ -1,0 +1,15 @@
+.title-index {
+  margin: 0;
+  padding: 0;
+
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: none;
+}
+
+@media #{$tablet-widths} {
+  .title-index {
+    font-size: 60px;
+  }
+}

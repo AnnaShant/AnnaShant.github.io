@@ -1,0 +1,97 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__toggle {
+  @include reset-btn();
+
+  position: absolute;
+  top: -42px;
+  right: 20px;
+  z-index: 2;
+
+  display: block;
+  width: 24px;
+  height: 21px;
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+
+  cursor: pointer;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 24px;
+  height: 2px;
+
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: -42px;
+  right: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    right: 0;
+
+    width: 24px;
+    height: 2px;
+
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media #{$mobile-widths-menu} {
+  .main-nav--closed .main-nav__items {
+    display: none;
+  }
+
+  .main-nav--opened {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__items {
+    display: block;
+  }
+}
+
+@media #{$tablet-widths} {
+  .main-nav {
+    padding-top: 36px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media #{$desktop-widths} {
+  .main-nav {
+    padding-top: 66px;
+  }
+}

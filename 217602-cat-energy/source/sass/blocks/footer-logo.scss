@@ -1,0 +1,34 @@
+.footer-logo {
+  margin: 0 75px;
+}
+
+.footer-logo[href="index.html"] {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+
+  &:active {
+    opacity: 0.6;
+    transition: none;
+  }
+}
+
+.footer-logo__name {
+  padding-bottom: 27px;
+}
+
+@media #{$tablet-widths} {
+  .footer-logo {
+    margin: 0;
+    padding-top: 24px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .footer-logo {
+    padding-top: 25px;
+  }
+}

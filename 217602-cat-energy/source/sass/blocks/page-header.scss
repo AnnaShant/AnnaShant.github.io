@@ -1,0 +1,14 @@
+@media #{$tablet-widths} {
+  .page-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media #{$desktop-widths} {
+  .page-header {
+    position: relative;
+    z-index: 3;
+  }
+}

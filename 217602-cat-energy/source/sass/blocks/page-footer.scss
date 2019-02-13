@@ -1,0 +1,14 @@
+.page-footer {
+  padding-top: 40px;
+  padding-bottom: 25px;
+
+  background-color: #f2f2f2;
+}
+
+@media #{$tablet-widths} {
+  .page-footer__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
