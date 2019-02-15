@@ -1,0 +1,28 @@
+.our-pets {
+  margin-top: 25px;
+
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.our-pets__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.our-pets__title {
+  width: 400px;
+
+  margin-bottom: 63px;
+  margin-left: 380px;
+  padding-top: 62px;
+
+  text-align: center;
+}
+
+.our-pets__pagination {
+  margin-left: 445px;
+  margin-top: 28px;
+  padding-bottom: 65px;
+}

@@ -1,0 +1,38 @@
+.promo {
+  min-height: 925px;
+  margin-top: -$height-header;
+
+  background-color: #000000;
+  background-image: url("../img/header-background.jpg");
+}
+
+.promo__container {
+  position: relative;
+}
+
+.promo__wrap {
+  position: absolute;
+  top: 320px;
+  left: 0;
+
+  width: 460px;
+}
+
+.promo__title {
+  font-size: 48px;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.promo__text {
+  margin-bottom: 52px;
+  font-family: $font-arial;
+  font-size: 15px;
+  color: $color-text-menu;
+  line-height: 1.6;
+}
+
+.promo__btn {
+  padding: 16px 44px;
+}

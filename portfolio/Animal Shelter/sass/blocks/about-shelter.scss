@@ -1,0 +1,28 @@
+.about-shelter {
+  display: flex;
+
+  padding-top: 90px;
+  padding-bottom: 75px;
+  padding-left: 167px;
+}
+
+.about-shelter__wrap-text {
+  width: 415px;
+  margin-top: 25px;
+  margin-left: 120px;
+}
+
+.about-shelter__title {
+  margin-bottom: 33px;
+  padding-right: 100px;
+}
+
+.about-shelter__text {
+  font-size: 15px;
+  font-family: $font-arial;
+  line-height: 1.6;
+}
+
+.about-shelter__text-1 {
+  margin-bottom: 22px;
+}

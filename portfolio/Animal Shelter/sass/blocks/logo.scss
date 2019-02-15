@@ -1,0 +1,33 @@
+.logo {
+  width: 200px;
+  margin-top: 42px;
+
+  text-decoration: none;
+
+  &--pets {
+    margin-top: 16px;
+  }
+}
+
+.logo__title {
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 0;
+  color: $color-text;
+
+  &--index {
+    color: $color-btn;
+  }
+}
+
+.logo__text {
+  font-family: $font-arial;
+  font-size: 13px;
+  line-height: 0;
+  color: #292929;
+  letter-spacing: 1.5px;
+
+  &--index {
+    color: #ffffff;
+  }
+}

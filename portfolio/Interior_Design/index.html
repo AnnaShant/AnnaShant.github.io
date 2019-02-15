@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Interior Design</title>
+  <link href="css/style.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body class="page">
+  <header class="page-header">
+    <div class="container">
+      <div class="logo">
+        <a class="logo__link" href="#">
+          <picture class="logo__link-picture">
+            <source media="(min-width: 1360px)" srcset="img/logo-desktop.png">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.png">
+            <img class="logo__img" src="img/logo.png" alt="Logo">
+          </picture>
+        </a>
+      </div>
+
+      <div class="phone">
+        <p class="phone__text">+7 (800) 823 48 88</p>
+      </div>
+
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+        <ul class="menu-nav__items menu-list">
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Главная</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Преимущества</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Портфолио</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Наши услуги</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Отзывы</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Контакты</a>
+          </li>
+          <li class="menu-list__item">
+            <div class="page-header__social social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link social__link--vk" href="#" aria-label="Вконтакте">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="14" viewBox="0 0 22 14">
+                      <image id="_003-vk_копия" data-name="003-vk копия" width="22" height="14" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAOCAMAAAAc7xz/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAzFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAAA6LMcaAAAAQnRSTlMAboB8Imny8ZpyZcwr0uZPgh1R0L6pGZNLIbn8CUyWjzWUSBXr0SBc3hi9QEb37/WjymfpH5AF13TDEtuICqoR8+Wy6LyKAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKdJREFUGNNV0McSwjAMBNDFQAIkhE7ovYTee/f/fxSS7Yv3oJXeTMYzQUyIeAJISsd1U6CkhRAZSIoH+FnqgDTHIJHnWQCKVCXiMt8VVLlCoKZZnbIONKiaLbQ1d1i79FWPlz4G6o0hHyN+GWNeJ1Ma0WzO+0LxktfVmueGxxY6O2llb9i3+XA0frI9OBu/GLiGqm6G7w/NgKf6afz1dij0bz4R9ff3B+7iLrPprO0iAAAAAElFTkSuQmCC">
+                    </image></svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--insta" href="#" aria-label="instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+                      <image id="_002-instagram_копия" data-name="002-instagram копия" width="22" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAMAAADzapwJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABC1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAACJg4+MAAAAV3RSTlMAAZfn8vHpnQaZpPqwdHri/Pj7cvcPb2TsseZ5NzY9wn8NB3Ni86BRtd/NWamWgMFTbsmYgmes49F1XIWKFxH1Ci2+vDDS3T5wW6LIpgNt3n58dnvhq+pV1mKjAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAPdJREFUGNNt0XdXwjAUBfCLBEShKsM6UECFouIq1oEL3AsXjvv9vwmvoRHaw/0nye+85CR5iE3ElUoMo5RKTqYwxTGZRjoMGcuameUcsiHNQZJnASrEhXlhmyrCab96YZQXlzLLZHFltVQe4coasL4RLP65CJ2q4Rqd+ia3EGSb5brDmnADO9w1vMd9HGh20eShYU82HmnO45gnhk+l2tbcwhl5PlCbUtUKOBYnLy6BqwrZ7sAKGNf+u29uEzKUMGTc3Q8u/PAIw0/61OeX12a3+uZPXeEs3xGJKx+b44f36eer1/vWE+9H2uCMa9ovUk5SRfLX7fQBgPJYgxNUlYYAAAAASUVORK5CYII=">
+                    </image></svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--fb" href="#" aria-label="facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="22" viewBox="0 0 12 22">
+                      <image id="_001-facebook_копия" data-name="001-facebook копия" width="12" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAllBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAADAm+O6AAAAMHRSTlMAQKHa8PLkhljM8daTIh8cxzG/Ln+S6LKRierpo7r41cLEhOM8AeZHBUwG+lQD1EPJzWNYAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAHdJREFUGNOtzFkOgkAQRdFyKBVsJwSUSQQVEFB7/6uDR5HQC/B93ZNKigibzRdL5tXQay1Db7QBa2wb2KLUbn8AjsCJZA5wRrnK84HLVQWkjVE4dWRefIqT5IZK71mOHw/gKZ9fBVAKqgHvP6FugFbw+TKz/eurA6mBHBs/pJ/NAAAAAElFTkSuQmCC">
+                    </image></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="page-header__tagline tagline">
+        <h1 class="tagline__title title-block title-block--big">Дизайн интерьеров</h1>
+        <p class="tagline__text">Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.</p>
+        <a class="tagline__btn" href="#">Заказать дизайн</a>
+      </div>
+
+      <div id="slider" class="slider">
+        <div class="slider__items">
+          <div class="slider__item slider__item_active">
+            <img class="slider__img" src="img/menu-background.jpg" width="1163" height="595" alt="Photo">
+          </div>
+          <div class="slider__item">
+            <img class="slider__img" src="img/menu-background.jpg" width="1163" height="595" alt="Photo">
+          </div>
+          <div class="slider__item">
+            <img class="slider__img" src="img/menu-background.jpg" width="1163" height="595" alt="Photo">
+          </div>
+          <div class="slider__item">
+            <img class="slider__img" src="img/menu-background.jpg" width="1163" height="595" alt="Photo">
+          </div>
+        </div>
+
+        <ol class="slider__indicators">
+          <li class="slider__indicator slider__indicator_active" data-slide-to="0"></li>
+          <li class="slider__indicator" data-slide-to="1"></li>
+          <li class="slider__indicator" data-slide-to="2"></li>
+          <li class="slider__indicator" data-slide-to="3"></li>
+        </ol>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="page-main__advantages advantages container">
+      <h2 class="visually-hidden">Наши преимущества</h2>
+
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <h3 class="advantages__title">Берем весь ремонт на себя</h3>
+          <p class="advantages__text">Заботы по дизайну и отделке помещения возьмем на себя,
+            останется дождаться завершения работ и наслаждаться результатом</p>
+        </li>
+
+        <li class="advantages__item">
+          <h3 class="advantages__title">Мы - профессионалы своего дела</h3>
+          <p class="advantages__text">Наши дизайнеры постоянно повышают квалификацию, посещеют курсы и тренинги,
+            а студия уже реализовала свыше 1000 дизайн-проектов</p>
+        </li>
+
+        <li class="advantages__item">
+          <h3 class="advantages__title">Наши проекты индивидуальны</h3>
+          <p class="advantages__text">Каждый, созданный студией, интерьер -
+            индивидуальное и максимально продуманное решение для каждого вида помещения</p>
+        </li>
+
+        <li class="advantages__item">
+          <h3 class="advantages__title">Рабатаем на выгодных условиях</h3>
+          <p class="advantages__text">Ценовая политика студии очень лояльна,  мы осуществляем контроль всего процесса работы
+            и получаем результат который делает клиентов счастивыми</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="page-main__portfolio portfolio container">
+      <h2 class="portfolio__title title-block">Портфолио</h2>
+
+      <div id="portfolio__slider" class="portfolio__slider">
+        <ol class="portfolio__slider-indicators">
+          <li class="portfolio__slider-indicator portfolio__slider-indicator_active" data-slide-to="0">
+            <label tabindex="0">Все проекты</label>
+          </li>
+          <li class="portfolio__slider-indicator" data-slide-to="1">
+            <label tabindex="0">Дизайн интерьеров</label>
+          </li>
+          <li class="portfolio__slider-indicator" data-slide-to="2">
+            <label tabindex="0">Отделочные работы</label>
+          </li>
+        </ol>
+
+        <ul class="portfolio__slider-items">
+          <li class="portfolio__slider-item portfolio__slider-item_active">
+            <picture class="portfolio__picture">
+              <source media="(min-width: 1360px)" srcset="img/large-desktop-3.jpg">
+              <source media="(min-width: 768px)" srcset="img/large-tablet.jpg">
+              <img class="portfolio__sliders-img" src="img/large-mobile.jpg" alt="Large">
+            </picture>
+            <p class="portfolio__sliders-text">Дизайн интерьера гостиной</p>
+            <span class="portfolio__sliders-mini-text">Дизайн интерьера</span>
+          </li>
+          <li class="portfolio__slider-item portfolio__slider-item_active">
+            <picture class="portfolio__picture">
+              <source media="(min-width: 1360px)" srcset="img/large-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/large-tablet.jpg">
+              <img class="portfolio__sliders-img" src="img/large-mobile.jpg" alt="Large">
+            </picture>
+            <div class="portfolio__sliders-plus"></div>
+            <p class="portfolio__sliders-text">Дизайн интерьера гостиной</p>
+            <span class="portfolio__sliders-mini-text">Дизайн интерьера</span>
+          </li>
+          <li class="portfolio__slider-item">
+            <picture class="portfolio__picture">
+              <source media="(min-width: 1360px)" srcset="img/large-desktop-1.jpg">
+              <source media="(min-width: 768px)" srcset="img/large-tablet.jpg">
+              <img class="portfolio__sliders-img" src="img/large-mobile.jpg" alt="Large">
+            </picture>
+            <p class="portfolio__sliders-text">Дизайн столовой в стиле "Бохо"</p>
+            <span class="portfolio__sliders-mini-text">Дизайн интерьера</span>
+          </li>
+          <li class="portfolio__slider-item">
+            <picture class="portfolio__picture">
+              <source media="(min-width: 1360px)" srcset="img/large-desktop-2.jpg">
+              <source media="(min-width: 768px)" srcset="img/large-tablet.jpg">
+              <img class="portfolio__sliders-img" src="img/large-mobile.jpg" alt="Large">
+            </picture>
+            <p class="portfolio__sliders-text">Лофт интерьер для отеля Hiloft</p>
+            <span class="portfolio__sliders-mini-text">Дизайн интерьера</span>
+          </li>
+        </ul>
+        <a href="#" role="button">
+          <div class="portfolio__slider-control portfolio__slider-control_prev"></div>
+        </a>
+        <a href="#" role="button">
+          <div class="portfolio__slider-control portfolio__slider-control_next"></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="page-main__services services">
+      <div class="container">
+        <h2 class="services__title title-block">Наши услуги</h2>
+
+        <div class="services__container">
+          <div class="services__slider-block services__slider">
+            <div class="services__slider-input">
+              <input class="visually-hidden" type="radio" id="services-1" name="toggle" checked="">
+              <input class="visually-hidden" type="radio" id="services-2" name="toggle">
+              <input class="visually-hidden" type="radio" id="services-3" name="toggle">
+              <input class="visually-hidden" type="radio" id="services-4" name="toggle">
+              <input class="visually-hidden" type="radio" id="services-5" name="toggle">
+              <input class="visually-hidden" type="radio" id="services-6" name="toggle">
+            </div>
+
+            <div class="services__slider-controls">
+              <ul class="services__slider-items">
+                <li class="services__slider-item">
+                  <label for="services-1" tabindex="0">Дизайн жилого помещения</label>
+                </li>
+                <li class="services__slider-item">
+                  <label for="services-2" tabindex="0">Дизайн отдельных комнат</label>
+                </li>
+                <li class="services__slider-item services__slider-item-active">
+                  <label for="services-3" tabindex="0">Дизайн коммерческих объектов</label>
+                </li>
+                <li class="services__slider-item">
+                  <label for="services-4" tabindex="0">Ремонт под ключ</label>
+                </li>
+                <li class="services__slider-item">
+                  <label for="services-5" tabindex="0">Отделочные работы</label>
+                </li>
+                <li class="services__slider-item">
+                  <label for="services-6" tabindex="0">Выезд дизайнера на дом</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="services__sliders">
+            <ul class="services__sliders-list">
+              <li class="services__sliders-item">
+                <picture class="services__link-picture">
+                  <source media="(min-width: 1360px)" srcset="img/nastuh-abootalebi-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/nastuh-abootalebi-tablet.jpg">
+                  <img class="services__sliders-img" src="img/nastuh-abootalebi-mobile.jpg" alt="Nastuh abootalebi">
+                </picture>
+                <h3 class="services__sliders-title">Дизайн коммерческих объектов</h3>
+                <span class="services__sliders-min-text">532 проекта</span>
+                <p class="services__sliders-text">Работая с коммерческими объектами, студия изучает целевую аудиторию,
+                  создает коммерческие интерьеры такими, чтобы посетители кафе, бара,
+                  гостиницы хотели возвращаться в интерьер снова и снова</p>
+                <a class="services__sliders-btn" href="#">Консультация</a>
+              </li>
+              <li class="services__sliders-item">
+                <picture class="services__link-picture">
+                  <source media="(min-width: 1360px)" srcset="img/nastuh-abootalebi-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/nastuh-abootalebi-tablet.jpg">
+                  <img class="services__sliders-img" src="img/nastuh-abootalebi-mobile.jpg" alt="Nastuh abootalebi">
+                </picture>
+                <h3 class="services__sliders-title">Дизайн коммерческих объектов</h3>
+                <span class="services__sliders-min-text">532 проекта</span>
+                <p class="services__sliders-text">Работая с коммерческими объектами, студия изучает целевую аудиторию,
+                  создает коммерческие интерьеры такими, чтобы посетители кафе, бара,
+                  гостиницы хотели возвращаться в интерьер снова и снова</p>
+                <a class="services__sliders-btn" href="#">Консультация</a>
+              </li>
+              <li class="services__sliders-item">
+                <picture class="services__link-picture">
+                  <source media="(min-width: 1360px)" srcset="img/nastuh-abootalebi-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/nastuh-abootalebi-tablet.jpg">
+                  <img class="services__sliders-img" src="img/nastuh-abootalebi-mobile.jpg" alt="Nastuh abootalebi">
+                </picture>
+                <h3 class="services__sliders-title">Дизайн коммерческих объектов</h3>
+                <span class="services__sliders-min-text">532 проекта</span>
+                <p class="services__sliders-text">Работая с коммерческими объектами, студия изучает целевую аудиторию,
+                  создает коммерческие интерьеры такими, чтобы посетители кафе, бара,
+                  гостиницы хотели возвращаться в интерьер снова и снова</p>
+                <a class="services__sliders-btn" href="#">Консультация</a>
+              </li>
+              <li class="services__sliders-item">
+                <picture class="services__link-picture">
+                  <source media="(min-width: 1360px)" srcset="img/nastuh-abootalebi-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/nastuh-abootalebi-tablet.jpg">
+                  <img class="services__sliders-img" src="img/nastuh-abootalebi-mobile.jpg" alt="Nastuh abootalebi">
+                </picture>
+                <h3 class="services__sliders-title">Дизайн коммерческих объектов</h3>
+                <span class="services__sliders-min-text">532 проекта</span>
+                <p class="services__sliders-text">Работая с коммерческими объектами, студия изучает целевую аудиторию,
+                  создает коммерческие интерьеры такими, чтобы посетители кафе, бара,
+                  гостиницы хотели возвращаться в интерьер снова и снова</p>
+                <a class="services__sliders-btn" href="#">Консультация</a>
+              </li>
+              <li class="services__sliders-item">
+                <picture class="services__link-picture">
+                  <source media="(min-width: 1360px)" srcset="img/nastuh-abootalebi-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/nastuh-abootalebi-tablet.jpg">
+                  <img class="services__sliders-img" src="img/nastuh-abootalebi-mobile.jpg" alt="Nastuh abootalebi">
+                </picture>
+                <h3 class="services__sliders-title">Дизайн коммерческих объектов</h3>
+                <span class="services__sliders-min-text">532 проекта</span>
+                <p class="services__sliders-text">Работая с коммерческими объектами, студия изучает целевую аудиторию,
+                  создает коммерческие интерьеры такими, чтобы посетители кафе, бара,
+                  гостиницы хотели возвращаться в интерьер снова и снова</p>
+                <a class="services__sliders-btn" href="#">Консультация</a>
+              </li>
+              <li class="services__sliders-item">
+                <picture class="services__link-picture">
+                  <source media="(min-width: 1360px)" srcset="img/nastuh-abootalebi-desktop.jpg">
+                  <source media="(min-width: 768px)" srcset="img/nastuh-abootalebi-tablet.jpg">
+                  <img class="services__sliders-img" src="img/nastuh-abootalebi-mobile.jpg" alt="Nastuh abootalebi">
+                </picture>
+                <h3 class="services__sliders-title">Дизайн коммерческих объектов</h3>
+                <span class="services__sliders-min-text">532 проекта</span>
+                <p class="services__sliders-text">Работая с коммерческими объектами, студия изучает целевую аудиторию,
+                  создает коммерческие интерьеры такими, чтобы посетители кафе, бара,
+                  гостиницы хотели возвращаться в интерьер снова и снова</p>
+                <a class="services__sliders-btn" href="#">Консультация</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-mane__studio studio container">
+      <h2 class="visually-hidden">О студии</h2>
+
+      <div class="studio__block">
+        <div class="studio__play"></div>
+        <p class="studio__text">О студии дизайна интерьеров BRUME за 2 минуты</p>
+      </div>
+    </section>
+
+    <section class="page-main__stages-work stages-work container">
+      <h2 class="stages-work__title title-block">Этапы работы</h2>
+
+      <ul class="stages-work__list">
+        <li class="stages-work__item">
+          <h3 class="stages-work__list-title">Консультация</h3>
+          <p class="stages-work__list-text">Обсуждаем задачи и пожелания,
+            предлагаем варианты дизайна интерьера, оговариваем сроки реализации.</p>
+        </li>
+        <li class="stages-work__item">
+          <h3 class="stages-work__list-title">Техническое задание</h3>
+          <p class="stages-work__list-text">Составляем техническое задание.
+            Заключаем договор, в котором прописываем все этапы проекта.</p>
+        </li>
+        <li class="stages-work__item">
+          <h3 class="stages-work__list-title">Замеры и планировака</h3>
+          <p class="stages-work__list-text">Фиксируем размеры стен, окон, плинтусов, дверных проемов  для эффективной работы</p>
+        </li>
+        <li class="stages-work__item">
+          <h3 class="stages-work__list-title">Дизайн-концепция</h3>
+          <p class="stages-work__list-text">Создаем концепцию на основе пожеланий клиента, его образов и ощущений, подбираем мебель.</p>
+        </li>
+        <li class="stages-work__item">
+          <h3 class="stages-work__list-title">3D Визуализация</h3>
+          <p class="stages-work__list-text">Создаем 3d визуализацию, собираем пакет чертежей соответствующий строительным нормам.</p>
+        </li>
+        <li class="stages-work__item">
+          <h3 class="stages-work__list-title">Комплектация интерьера</h3>
+          <p class="stages-work__list-text">Подбираем мебель, отделочные материалы, светильники и текстиль, декорируем интерьер.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="page-main__form form-block container">
+      <h2 class="form-block__title title-block title-block--big">Мечтаете об интерьере от BRUME?</h2>
+      <p class="form-block__text">Оставьте контактные данные, менеджер свяжется с вами в течении 15 минут, для уточнения всех деталей.</p>
+
+      <form class="form-block__box form">
+        <div class="form__name-wrap">
+          <label class="visually-hidden">Имя*</label>
+          <input class="form__input" type="text" id="form-name" name="form-name" placeholder="Имя*">
+        </div>
+
+        <div class="form__name-wrap">
+          <label class="visually-hidden">Телефон*</label>
+          <input class="form__input" type="tel" id="form-tel" name="form-tel" placeholder="Телефон*">
+        </div>
+
+        <div class="form__name-wrap">
+          <label class="visually-hidden">E-mail*</label>
+          <input class="form__input" type="email" id="form-email" name="form-email" placeholder="E-mail*">
+        </div>
+
+        <button class="form__btn" type="submit">Отправить</button>
+      </form>
+
+      <p class="form-block__text form-block__text--down">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+    </section>
+
+    <section class="page-main__reviews reviews container">
+      <h2 class="reviews__title title-block">Отзывы наших клиентов</h2>
+
+      <div id="reviews__slider" class="reviews__slider">
+        <div class="reviews__slider-items">
+          <div class="reviews__slider-item reviews__slider-item_active">
+            <picture class="logo__link-picture">
+              <source media="(min-width: 1360px)" srcset="img/photo-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-tablet.jpg">
+              <img class="reviews__sliders-img" src="img/photo-mobile.png" width="247" height="224" alt="Photo">
+            </picture>
+            <h3 class="reviews__sliders-title">Александра Холодная</h3>
+            <p class="reviews__sliders-text-mini">Услуга: интерьер детской</p>
+            <p class="reviews__sliders-text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки!
+              Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
+              <br>В следующий раз обратимся к BRUME!</p>
+          </div>
+          <div class="reviews__slider-item">
+            <picture class="logo__link-picture">
+              <source media="(min-width: 1360px)" srcset="img/photo-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-tablet.jpg">
+              <img class="reviews__sliders-img" src="img/photo-mobile.png" width="247" height="224" alt="Photo">
+            </picture>
+            <h3 class="reviews__sliders-title">Александра Холодная</h3>
+            <p class="reviews__sliders-text-mini">Услуга: интерьер детской</p>
+            <p class="reviews__sliders-text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки!
+              Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
+              <br>В следующий раз обратимся к BRUME!</p>
+          </div>
+          <div class="reviews__slider-item">
+            <picture class="logo__link-picture">
+              <source media="(min-width: 1360px)" srcset="img/photo-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-tablet.jpg">
+              <img class="reviews__sliders-img" src="img/photo-mobile.png" width="247" height="224" alt="Photo">
+            </picture>
+            <h3 class="reviews__sliders-title">Александра Холодная</h3>
+            <p class="reviews__sliders-text-mini">Услуга: интерьер детской</p>
+            <p class="reviews__sliders-text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки!
+              Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
+              <br>В следующий раз обратимся к BRUME!</p>
+          </div>
+          <div class="reviews__slider-item">
+            <picture class="logo__link-picture">
+              <source media="(min-width: 1360px)" srcset="img/photo-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-tablet.jpg">
+              <img class="reviews__sliders-img" src="img/photo-mobile.png" width="247" height="224" alt="Photo">
+            </picture>
+            <h3 class="reviews__sliders-title">Александра Холодная</h3>
+            <p class="reviews__sliders-text-mini">Услуга: интерьер детской</p>
+            <p class="reviews__sliders-text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки!
+              Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
+              <br>В следующий раз обратимся к BRUME!</p>
+          </div>
+        </div>
+        <a class="reviews__slider-control reviews__slider-control_prev" href="#" role="button"></a>
+        <a class="reviews__slider-control reviews__slider-control_next" href="#" role="button"></a>
+
+        <ol class="reviews__slider-indicators">
+          <li class="reviews__slider-indicator reviews__slider-indicator_active" data-slide-to="0"></li>
+          <li class="reviews__slider-indicator" data-slide-to="1"></li>
+          <li class="reviews__slider-indicator" data-slide-to="2"></li>
+          <li class="reviews__slider-indicator" data-slide-to="3"></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer container">
+    <div class="logo logo--footer">
+      <a class="logo__link" href="#">
+        <img class="logo_img" src="img/logo-footer.png" width="70" height="40" alt="Logo">
+      </a>
+    </div>
+
+    <div class="page-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#" aria-label="Вконтакте">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="19" viewBox="0 0 30 19">
+              <image id="_003-vk" data-name="003-vk" width="30" height="19" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAATCAMAAACwcE1OAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABCFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAACQWfHNAAAAVnRSTlMANFFTUjkBpvfy798xLlQrQI2KFf3At3eGdeoSNYLVdOd6g/YFcu4mtlkKKMWVB3zLGBakO4xtc6OAseKH0hs6khwIuVqduGtVKvjPjhfeqcPClAnT7An7s0wAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAA80lEQVQoz22R2VbCMBRFD7ZAiyh1QFFBBGyVKs4jDmBVFOcB+/+fYnJvk7zkvNx9z07a1VXkphzHzQMoFD2/VPKny5CZmXVEX0FKCYSeY5yXdoF5EVWaS7JbJqxJXGG9ioCPrYmuTtiQep11E9ggaImuQtTWB9POJhASRQVgS+tt1l2BMWMI7CjNj0l36Rt6xN4ecgT7wAHrQ9JHvBzjhOYpzrg4B+eC18s+jatrXm8yi9vUloHSGNr0ndZJx6LvtcaD7fqj8SObb2gdR6Z1nxQ9az9+Ud0r8Kb43fiPrPoUy1fG3+b1yU/ky8hf8jsh9P/+AZ4qdNcVvKdrAAAAAElFTkSuQmCC">
+            </image></svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--insta" href="#" aria-label="instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="26" viewBox="0 0 27 26">
+              <image id="_002-instagram" data-name="002-instagram" width="27" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAaCAMAAABxVtfCAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABKVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAACxXUwMAAAAYXRSTlMAVcfv8vHwyl1UYeTm29zr/LEFTvrzbvt9F2304rQOAwTDTxIBR7XlnIT49dfB+ScRpDm6JCLYDNQjD+gGvls/DYHeyRYZq5QuGHrQHguVnv6zjIrP/faTMUsCSu5qYNJp4F42GwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAExSURBVCjPddLnWsIwGAXgo1QEBSe1IsqwKgoKblDcgnug4p7n/m/CJC2RWjg/mvE2T780Abq6A0bP/xjB3hAQZqf0od8/GYlGB0QziCEfDY8AGCVjMH02BhmLJgyfjUuKx2i0sQl3ndcSk0HxnEqmUmlRfqtlpu2Z5OwcGchmI/TYPJwsNCeU5fIJchHNLJH5fM6xQnF5hQxrWyXX7PWCY+rVDW1Ji5uAayWUyS1t2xYr2HHNxi65p22fLOPAtTgOySNtx7LmqraaKPnEpVPRP8O5NlyIicvQ1XUtnBG9G/E//wy3crf1gCWbO3hNrXRyjxarqu8UHxrm41P5+UWNVC2m3HszpZTuFsTZWqy/plWc+Tdn8F4Xd6IiL0824o06ow+EOt7BT+CrEWx3d79/8AuGsIk72fM3KwAAAABJRU5ErkJggg==">
+            </image></svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#" aria-label="facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="26" viewBox="0 0 13 26">
+              <image id="_001-facebook" data-name="001-facebook" width="13" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAaCAMAAABb5iZtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAllBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAADAm+O6AAAAMHRSTlMARqDY7/LlpakxftPNw3lwO1w0NUNBlnxCPvzx9+q/2u3k5teVUQMEAZJEl0+mWIZTC+EBAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAH9JREFUGNO9zVkSgkAMBNCwRBRFEQRRRFwRV3L/08n0TJXjBeivfpVUQoQ4ruczjzQC0QHGBqwwEbFmoa7TWfTTXJ+gBRQbLaFE1XSV5dA6Kza0FStUWthRZYlJ/jb3teejHY6nszp7ga7NrVW6Qw/z/Qm9BtMb+hh13Kcs+vYFPoskhluVdScAAAAASUVORK5CYII=">
+            </image></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <p class="page-footer__text page-footer__text--1">BRUME interior, 2017</p>
+    <p class="page-footer__text page-footer__text--2">HolodnayaDesign</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

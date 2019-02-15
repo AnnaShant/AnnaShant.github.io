@@ -1,0 +1,17 @@
+.col-sm-4 {
+    margin: -120px auto;
+}
+
+.col-lg-8 {
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+.col-lg-12 {
+    margin-bottom: 30px;
+}
+
+.intro-lead-in,
+.intro-heading {
+    color: yellow;
+}

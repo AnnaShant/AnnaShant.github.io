@@ -1,0 +1,86 @@
+.pets {
+  padding-bottom: 83px;
+
+  background-color: #f6f6f6;
+}
+
+.pets__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  position: relative;
+
+  padding-bottom: 115px;
+}
+
+.pets__title {
+  padding-top: 73px;
+  padding-bottom: 65px;
+  padding-left: 365px;
+  padding-right: 370px;
+
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.pets__btn {
+  @include reset-btn();
+
+  width: 48px;
+  height: 48px;
+  margin-top: 184px;
+
+  outline: none;
+
+  background-image: url("../img/long-left-arrow.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 50%;
+  border: solid 2px $color-btn;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-btn;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--right {
+    transform: scale(-1, 1);
+  }
+}
+
+.pets__wrap-box {
+  display: flex;
+  justify-content: space-between;
+
+  width: 910px;
+}
+
+.pets__box {
+  position: relative;
+
+  width: 270px;
+
+  text-align: center;
+
+  &--pets {
+    margin-bottom: 70px;
+  }
+}
+
+.pets__name {
+  letter-spacing: 1px;
+}
+
+.pets__btn-link {
+  margin-left: 450px;
+
+  padding: 16px 48px;
+}

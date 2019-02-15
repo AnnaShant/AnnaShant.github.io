@@ -1,0 +1,58 @@
+.pagination__list {
+  @include reset-list();
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 280px;
+}
+
+.pagination__link {
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding-top: 10px;
+
+  color: #292929;
+  text-align: center;
+
+  border: solid 2px $color-btn;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-btn;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.pagination__link-one {
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding-top: 10px;
+
+  color: #292929;
+  text-align: center;
+
+  background-color: $color-btn;
+
+  border: solid 2px $color-btn;
+  border-radius: 50%;
+}
+
+.pagination__link-dots {
+  display: block;
+  width: 20px;
+  height: 48px;
+  padding-top: 15px;
+
+  font-size: 35px;
+  line-height: 0;
+  color: $color-btn;
+  text-align: center;
+}
