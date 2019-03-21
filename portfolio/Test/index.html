@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bus-Carriage</title>
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/picturefill.min.js" async=""></script>
+  </head>
+
+  <body class="page">
+
+    <header class="page-header container">
+
+      <div class="page-header__menu menu">
+        <!--Логотип-->
+        <div class="logo">
+          <a class="logo__link" href="#">
+            <picture class="logo__link-picture">
+              <source media="(min-width: 1366px)" srcset="img/svg/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/svg/logo-ipad.svg">
+              <img class="logo__img" src="img/svg/logo-mobile.svg" alt="Logo">
+            </picture>
+          </a>
+        </div>
+        <!--Телефон и смена языка-->
+        <div class="menu__wrap">
+          <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+              <path d="M40.2899 3.7793H36.2468C35.8952 3.7793 35.6097 4.06471 35.6097 4.4164C35.6097 4.76841 35.8952 5.05383 36.2468 5.05383H40.2899C41.0815 5.05383 41.7255 5.69781 41.7255 6.48943V16.2152C41.7255 17.0068 41.0815 17.6508 40.2899 17.6508H25.3896C25.2206 17.6508 25.0585 17.7181 24.9388 17.8375L21.2688 21.5075V18.2883C21.2688 17.9362 20.9837 17.6508 20.6317 17.6508H19.4181C18.6265 17.6508 17.9825 17.0068 17.9825 16.2152V6.48943C17.9825 5.69781 18.6265 5.05383 19.4181 5.05383H34.1226C34.4746 5.05383 34.7601 4.76841 34.7601 4.4164C34.7601 4.06471 34.4746 3.7793 34.1226 3.7793H19.4181C17.9238 3.7793 16.708 4.9951 16.708 6.48943V16.2152C16.708 17.7095 17.9238 18.9254 19.4181 18.9254H19.9946V23.0458C19.9946 23.3037 20.1497 23.536 20.3879 23.6347C20.4666 23.6672 20.5493 23.6833 20.6317 23.6833C20.7973 23.6833 20.9604 23.6183 21.0824 23.4966L25.6533 18.9254H40.2899C41.7842 18.9254 43 17.7095 43 16.2152V6.48943C43 4.9951 41.7842 3.7793 40.2899 3.7793Z" fill="#232323"></path>
+              <path d="M23.0355 11.9528C23.7911 11.4358 24.7316 10.7918 24.7316 9.69084C24.7316 9.16856 24.52 8.72338 24.1201 8.40352C23.7665 8.1204 23.279 7.95801 22.7826 7.95801C21.866 7.95801 20.892 8.52162 20.892 9.56585C20.892 10.0265 21.0859 10.2505 21.4848 10.2505C21.9349 10.2505 22.1777 10.0005 22.1777 9.76564C22.1777 9.3759 22.4011 9.15216 22.7908 9.15216C23.2498 9.15216 23.4125 9.46481 23.4125 9.73218C23.4125 10.2272 22.8289 10.6557 22.2108 11.1094C21.5133 11.6212 20.7922 12.1507 20.7922 12.8435V13.6506C20.7922 13.9009 21.1334 14.0607 21.3683 14.0607H24.3301C24.544 14.0607 24.7316 13.7874 24.7316 13.4757C24.7316 13.1732 24.544 12.9078 24.3301 12.9078H22.1609V12.8435C22.1609 12.5516 22.5664 12.2743 23.0355 11.9528Z" fill="#232323"></path>
+              <path d="M28.2569 14.0603C28.7099 14.0603 28.9163 13.8481 28.9163 13.6506V12.7792H29.2634C29.4704 12.7792 29.6735 12.4774 29.6735 12.1697C29.6735 11.7508 29.4609 11.5601 29.2634 11.5601H28.9163V10.9883C28.9163 10.8033 28.7437 10.5868 28.2569 10.5868C27.77 10.5868 27.5975 10.803 27.5975 10.9883V11.5601H26.9098L28.3746 8.62168C28.397 8.57018 28.4173 8.51506 28.4173 8.45929C28.4173 8.32347 28.3304 8.19323 28.1722 8.09251C28.0433 8.01083 27.8809 7.95801 27.7579 7.95801C27.5158 7.95801 27.3206 8.07808 27.2077 8.29657L25.2859 12.0647C25.2269 12.173 25.218 12.2707 25.218 12.3193C25.218 12.5945 25.3965 12.7792 25.6616 12.7792H27.5975V13.6502C27.5975 13.8481 27.8038 14.0603 28.2569 14.0603Z" fill="#232323"></path>
+              <path d="M33.2303 7.83141L30.3106 13.8291C30.2833 13.8835 30.2676 13.9426 30.2676 13.9918C30.2676 14.21 30.4592 14.4435 30.7443 14.4435C30.9116 14.4435 31.0694 14.3553 31.1281 14.2296L34.0564 8.23165C34.0849 8.17457 34.0908 8.11158 34.0908 8.06893C34.0908 7.79861 33.8317 7.61719 33.5892 7.61719C33.4252 7.61719 33.2943 7.69527 33.2303 7.83141Z" fill="#232323"></path>
+              <path d="M35.461 10.0675C35.8232 10.0675 36.129 9.87981 36.129 9.65738V9.1105H37.5967V9.67936L35.5516 13.2211C35.5106 13.2953 35.4922 13.3635 35.4922 13.4426C35.4922 13.8359 35.9318 14.1102 36.3265 14.1102C36.5141 14.1102 36.6371 14.0515 36.7018 13.9298L38.6485 10.2029C38.7112 10.0855 38.9159 9.68034 38.9159 9.40772V8.36776C38.9159 8.18896 38.6364 7.95801 38.3395 7.95801H35.3862C35.0956 7.95801 34.8098 8.16108 34.8098 8.36776V9.65738C34.8098 9.88341 35.1021 10.0675 35.461 10.0675Z" fill="#232323"></path>
+              <path d="M26.3515 25.9035C26.0202 25.5722 25.5793 25.3898 25.1105 25.3898C24.6417 25.3898 24.2008 25.5722 23.8694 25.9035L19.9743 29.7986C18.4232 28.988 17.0739 28.215 15.5661 26.9435C15.2971 26.7168 14.8953 26.7509 14.6682 27.0199C14.4415 27.2889 14.4757 27.6908 14.7447 27.9178C16.486 29.3859 18.0017 30.2146 19.8021 31.1453C20.0485 31.2726 20.349 31.226 20.5452 31.0298L22.6408 28.9345L29.5495 35.8432C27.318 37.7587 24.1578 38.4257 20.5698 37.7203C16.5346 36.9268 12.2645 34.4423 8.54625 30.7241C4.82798 27.0058 2.34323 22.7354 1.54965 18.7002C0.844312 15.1119 1.51126 11.9516 3.4265 9.72048L10.3362 16.6298L8.23984 18.7258C8.04366 18.922 7.99707 19.2228 8.12469 19.4692C9.39364 21.9228 10.4175 23.7232 12.9823 26.2883C13.2313 26.537 13.6348 26.537 13.8835 26.2883C14.1325 26.0393 14.1325 25.6358 13.8835 25.3871C11.5841 23.0877 10.6206 21.4953 9.47139 19.297L13.3668 15.4012C13.6985 15.0699 13.8809 14.629 13.8809 14.1602C13.8809 13.6914 13.6985 13.2504 13.3668 12.9191L7.11983 6.67212C6.78849 6.34045 6.34757 6.15771 5.87877 6.15771C5.40997 6.15771 4.96905 6.34045 4.63771 6.67179L2.95835 8.35114C0.402739 10.9068 -0.541754 14.6696 0.299071 18.9459C1.14088 23.2268 3.74964 27.7298 7.64506 31.6253C11.5402 35.5203 16.0431 38.1291 20.324 38.9706C21.343 39.171 22.3324 39.2701 23.2838 39.2698C26.3246 39.2698 28.9721 38.258 30.9188 36.3113L32.5979 34.6323C32.9295 34.3006 33.1119 33.86 33.1119 33.3912C33.1119 32.9224 32.9295 32.4815 32.5979 32.1502L26.3515 25.9035ZM5.5389 7.57298C5.62944 7.48243 5.75017 7.43224 5.87877 7.43224C6.00737 7.43224 6.1281 7.48211 6.21864 7.57298L12.4659 13.8203C12.5565 13.9108 12.6067 14.0316 12.6067 14.1602C12.6067 14.2888 12.5565 14.4095 12.4659 14.5L11.2374 15.7286L4.3103 8.80158L5.5389 7.57298ZM31.697 33.7311L30.4681 34.9597L23.542 28.0333L24.7706 26.8047C24.8612 26.7138 24.9822 26.664 25.1105 26.664C25.2388 26.664 25.3595 26.7138 25.4504 26.8047L31.697 33.051C31.8843 33.2387 31.8843 33.5438 31.697 33.7311Z" fill="#232323"></path>
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <rect width="43" height="43" fill="white"></rect>
+              </clipPath>
+            </defs>
+          </svg>
+          <p class="menu__time">Время работы: 24/7</p>
+          <p class="menu__tel">+7(343)300-96-83</p>
+
+          <div class="menu__flag menu__flag--closed">
+            <a class="menu__flag-items" href="#">
+              <picture class="menu__flag-picture">
+                <source media="(min-width: 768px)" srcset="img/svg/russia-desktop.svg">
+                <img class="menu__flag-img" src="img/svg/russia-mobile.svg" alt="Flag">
+              </picture>
+            </a>
+            <ul class="menu__flag-sub-menu">
+              <li class="menu__flag-item menu__flag-item--ru">
+                <a href="#">
+                  <picture class="menu__flag-picture">
+                    <source media="(min-width: 768px)" srcset="img/svg/russia-desktop.svg">
+                    <img class="menu__flag-img" src="img/svg/russia-mobile.svg" alt="Flag">
+                  </picture>
+                </a>
+              </li>
+              <li class="menu__flag-item menu__flag-item--en">
+                <a href="#">
+                  <picture class="menu__flag-picture">
+                    <source media="(min-width: 768px)" srcset="img/svg/english-desktop.svg">
+                    <img class="menu__flag-img" src="img/svg/english.svg" alt="Flag">
+                  </picture>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </header>
+
+    <main class="page-main">
+
+      <!--Первая форма-->
+      <section class="bus-pickup container">
+        <h2 class="visually-hidden">Подбор автобуса</h2>
+
+        <p class="bus-pickup__text bus-pickup__text--tab">
+          <span>За 2 минуты</span>
+          <span>подберем Вам автобус</span>
+          <span>или микроавтобус</span>
+          <span>в Екатеринбурге</span></p>
+        <p class="bus-pickup__text bus-pickup__text--mobile"><span>За 2 минуты подберем Вам микроавтобус или автобус</span></p>
+
+        <form class="bus-pickup__form" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="bus-pickup__form-wrap">
+            <label class="bus-pickup__form-label" for="bus-pickup-city">Выберите город</label>
+            <select class="bus-pickup__form-select" id="bus-pickup-city" name="bus-pickup-city" required="">
+              <option disabled="" selected="" value="">&mdash;</option>
+              <option>Архангельск</option>
+              <option>Астрахань</option>
+              <option>Барнаул</option>
+              <option>Белгород</option>
+              <option>Брянск</option>
+              <option>Великий Новгород</option>
+              <option>Владивосток</option>
+              <option>Владикавказ</option>
+              <option>Владимир</option>
+              <option>Волгоград</option>
+              <option>Волжский</option>
+              <option>Вологда</option>
+              <option>Воронеж</option>
+              <option>Евпатория</option>
+              <option>Екатеринбург</option>
+              <option>Иваново</option>
+              <option>Ижевск</option>
+              <option>Иркутск</option>
+              <option>Казань</option>
+              <option>Калининград</option>
+              <option>Калуга</option>
+              <option>Кемерово</option>
+              <option>Керчь</option>
+              <option>Киров</option>
+              <option>Краснодар</option>
+              <option>Красноярск</option>
+              <option>Курган</option>
+              <option>Курск</option>
+              <option>Липецк</option>
+              <option>Магнитогорск</option>
+              <option>Махачкала</option>
+              <option>Москва</option>
+              <option>Мурманск</option>
+              <option>Набережные Челны</option>
+              <option>Нижний Новгород</option>
+              <option>Нижний Тагил</option>
+              <option>Новокузнецк</option>
+              <option>Новороссийск</option>
+              <option>Новосибирск</option>
+              <option>Омск</option>
+              <option>Орёл</option>
+              <option>Оренбург</option>
+              <option>Пенза</option>
+              <option>Пермь</option>
+              <option>Петрозаводск</option>
+              <option>Псков</option>
+              <option>Ростов-на-Дону</option>
+              <option>Рязань</option>
+              <option>Самара</option>
+              <option>Санкт-Петербург</option>
+              <option>Саранск</option>
+              <option>Саратов</option>
+              <option>Севастополь</option>
+              <option>Симферополь</option>
+              <option>Смоленск</option>
+              <option>Сочи</option>
+              <option>Ставрополь</option>
+              <option>Сургут</option>
+              <option>Тверь</option>
+              <option>Тольятти</option>
+              <option>Томск</option>
+              <option>Тула</option>
+              <option>Тюмень</option>
+              <option>Улан-Удэ</option>
+              <option>Ульяновск</option>
+              <option>Уфа</option>
+              <option>Феодосия</option>
+              <option>Хабаровск</option>
+              <option>Чебоксары</option>
+              <option>Челябинск</option>
+              <option>Череповец</option>
+              <option>Чита</option>
+              <option>Якутск</option>
+              <option>Ялта</option>
+              <option>Ярославль</option>
+
+
+            </select>
+          </div>
+
+          <div class="bus-pickup__form-wrap">
+            <label class="bus-pickup__form-label" for="bus-pickup-transport">Выберите транспорт</label>
+            <select class="bus-pickup__form-select" id="bus-pickup-transport" name="bus-pickup-transport" required="">
+              <option disabled="" selected="" value="">&mdash;</option>
+              <option>Toyota Alphard</option>
+              <option>Мерседес Viano</option>
+              <option>Mercedes Benz Vito</option>
+              <option>Газель</option>
+              <option>Mercedes Istana</option>
+              <option>Газель Next</option>
+            </select>
+          </div>
+
+          <div class="bus-pickup__form-wrap">
+            <label class="bus-pickup__form-label" for="tel">Телефон</label>
+            <input class="bus-pickup__form-input" type="tel" id="tel" placeholder="+7 909 453 268" required="">
+          </div>
+
+          <input class="bus-pickup__form-check-in" type="checkbox" id="bus-pickup-check" name="bus-pickup-check" required="">
+          <label class="bus-pickup__form-check-leb" for="bus-pickup-check">Согласен с обработкой данных</label>
+
+          <button class="btn btn__form btn__form-payment" type="submit">Получить расчет</button>
+          <p class="bus-pickup__form-text-min">Вам перезвонят в течение 2х минут – 24/7</p>
+        </form>
+      </section>
+      <!--Слайдер со свайпом-->
+      <section class="bus-destination">
+        <h2 class="title title__bus-destination container">Автобусы по назначению</h2>
+
+        <div class="bus-destination__box bus-destination__slider">
+          <div class="bus-destination__wrap">
+            <img class="bus-destination__img" src="img/atobus_dli_turov.webp" alt="Bus" width="270" height="161">
+            <div class="bus-destination__block">
+              <p class="bus-destination__title">Автобус для детей</p>
+              <p class="bus-destination__text">
+                Перевозка детей в автобусе по всем нормам и правилам, включая все лицензии и разрешения!
+                (обеспечиваем согласование и документацию с ГИБДД)
+              </p>
+
+              <button class="btn btn__bus-destination btn__modal-cost" type="button">Заказать автобус</button>
+            </div>
+          </div>
+
+          <div class="bus-destination__wrap">
+            <img class="bus-destination__img" src="img/atobus_dli_turov.webp" alt="Bus" width="270" height="161">
+            <div class="bus-destination__block">
+              <p class="bus-destination__title">Автобус для детей</p>
+              <p class="bus-destination__text">
+                Перевозка детей в автобусе по всем нормам и правилам, включая все лицензии и разрешения!
+                (обеспечиваем согласование и документацию с ГИБДД)
+              </p>
+
+              <button class="btn btn__bus-destination btn__modal-cost" type="button">Заказать автобус</button>
+            </div>
+          </div>
+
+          <div class="bus-destination__wrap">
+            <img class="bus-destination__img" src="img/atobus_dli_turov.webp" alt="Bus" width="270" height="161">
+            <div class="bus-destination__block">
+              <p class="bus-destination__title">Автобус для детей</p>
+              <p class="bus-destination__text">
+                Перевозка детей в автобусе по всем нормам и правилам, включая все лицензии и разрешения!
+                (обеспечиваем согласование и документацию с ГИБДД)
+              </p>
+
+              <button class="btn btn__bus-destination btn__modal-cost" type="button">Заказать автобус</button>
+            </div>
+          </div>
+
+          <div class="bus-destination__wrap">
+            <img class="bus-destination__img" src="img/atobus_dli_turov.webp" alt="Bus" width="270" height="161">
+            <div class="bus-destination__block">
+              <p class="bus-destination__title">Автобус для детей</p>
+              <p class="bus-destination__text">
+                Перевозка детей в автобусе по всем нормам и правилам, включая все лицензии и разрешения!
+                (обеспечиваем согласование и документацию с ГИБДД)
+              </p>
+
+              <button class="btn btn__bus-destination btn__modal-cost" type="button">Заказать автобус</button>
+            </div>
+          </div>
+
+          <div class="bus-destination__wrap">
+            <img class="bus-destination__img" src="img/atobus_dli_turov.webp" alt="Bus" width="270" height="161">
+            <div class="bus-destination__block">
+              <p class="bus-destination__title">Автобус для детей</p>
+              <p class="bus-destination__text">
+                Перевозка детей в автобусе по всем нормам и правилам, включая все лицензии и разрешения!
+                (обеспечиваем согласование и документацию с ГИБДД)
+              </p>
+
+              <button class="btn btn__bus-destination btn__modal-cost" type="button">Заказать автобус</button>
+            </div>
+          </div>
+
+          <div class="bus-destination__wrap">
+            <img class="bus-destination__img" src="img/atobus_dli_turov.jpg" alt="Bus" width="270" height="161">
+            <div class="bus-destination__block">
+              <p class="bus-destination__title">Автобус для детей</p>
+              <p class="bus-destination__text">
+                Перевозка детей в автобусе по всем нормам и правилам, включая все лицензии и разрешения!
+                (обеспечиваем согласование и документацию с ГИБДД)
+              </p>
+
+              <button class="btn btn__bus-destination btn__modal-cost" type="button">Заказать автобус</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Блоки с выбором автобусов-->
+      <section class="choice-transport">
+
+        <div class="choice-transport__wrapper">
+
+          <h2 class="title title__choice-transport container">Выберите транспорт</h2>
+
+          <div class="choice-transport__tab container">
+            <button class="choice-transport__tablinks active" onclick="openCity(event, 'economy')" id="defaultOpen"><b>Эконом</b><span><span>Автобусы</span> от 2006 до 2015 года</span></button>
+            <button class="choice-transport__tablinks" onclick="openCity(event, 'lux')"><b>Люкс</b><span><span>Автобусы</span> от 2015 до 2019 года</span></button>
+          </div>
+
+          <div class="choice-transport__tabcontent choice-transport__economy container" id="economy">
+
+            <h2 class="choice-transport__title">Минивены</h2>
+            <div class="choice-transport__wrap">
+
+              <div class="choice-transport__box">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Volkswagen Caravelle</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">11</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Комфортный минивэн с водителем для междугородних поездок</p>
+                <p class="choice-transport__text-fat">Аренда минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>800</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>25</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+              <div class="choice-transport__box">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Volkswagen Caravelle</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">11</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Комфортный минивэн с водителем для междугородних поездок</p>
+                <p class="choice-transport__text-fat">Аренда минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>800</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>25</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+              <div class="choice-transport__box choice-transport__box--tab">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Volkswagen Caravelle</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">11</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Комфортный минивэн с водителем для междугородних поездок</p>
+                <p class="choice-transport__text-fat">Аренда минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>800</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>25</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+            </div>
+
+            <button class="btn btn__more" type="button" disabled="">Больше вариантов</button>
+
+            <h2 class="choice-transport__title">Микроавтобусы</h2>
+            <div class="choice-transport__wrap">
+
+              <div class="choice-transport__box">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Volkswagen Caravelle</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">11</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Комфортный минивэн с водителем для междугородних поездок</p>
+                <p class="choice-transport__text-fat">Аренда минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>800</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>25</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+              <div class="choice-transport__box">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Volkswagen Caravelle</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">11</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Комфортный минивэн с водителем для междугородних поездок</p>
+                <p class="choice-transport__text-fat">Аренда минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>800</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>25</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+              <div class="choice-transport__box choice-transport__box--tab">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Volkswagen Caravelle</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">11</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Комфортный минивэн с водителем для междугородних поездок</p>
+                <p class="choice-transport__text-fat">Аренда минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>800</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>25</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+            </div>
+
+            <button class="btn btn__more" type="button">Больше вариантов</button>
+
+            <h2 class="choice-transport__title">Автобусы</h2>
+            <div class="choice-transport__wrap">
+
+              <div class="choice-transport__box">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Volkswagen Caravelle</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">11</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Комфортный минивэн с водителем для междугородних поездок</p>
+                <p class="choice-transport__text-fat">Аренда минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>800</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>25</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+              <div class="choice-transport__box">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Volkswagen Caravelle</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">11</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Комфортный минивэн с водителем для междугородних поездок</p>
+                <p class="choice-transport__text-fat">Аренда минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>800</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>25</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+              <div class="choice-transport__box choice-transport__box--tab">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Volkswagen Caravelle</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">11</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Комфортный минивэн с водителем для междугородних поездок</p>
+                <p class="choice-transport__text-fat">Аренда минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>800</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>25</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+            </div>
+
+            <button class="btn btn__more" type="button">Больше вариантов</button>
+
+          </div>
+
+          <div class="choice-transport__tabcontent choice-transport__lux container" id="lux">
+
+            <h2 class="choice-transport__title">Минивены</h2>
+            <div class="choice-transport__wrap">
+
+              <div class="choice-transport__box">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Toyota Alphard</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">6</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Современный и стильный минивэн для поездок небольшой компанией.</p>
+                <p class="choice-transport__text-fat">Заказ минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>900</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>30</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+              <div class="choice-transport__box">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Toyota Alphard</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">6</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Современный и стильный минивэн для поездок небольшой компанией.</p>
+                <p class="choice-transport__text-fat">Заказ минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>900</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>30</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+              <div class="choice-transport__box choice-transport__box--tab">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Toyota Alphard</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">6</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Современный и стильный минивэн для поездок небольшой компанией.</p>
+                <p class="choice-transport__text-fat">Заказ минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>900</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>30</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+            </div>
+
+            <button class="btn btn__more" type="button">Больше вариантов</button>
+
+            <h2 class="choice-transport__title">Микроавтобусы</h2>
+            <div class="choice-transport__wrap">
+
+              <div class="choice-transport__box">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Toyota Alphard</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">6</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Современный и стильный минивэн для поездок небольшой компанией.</p>
+                <p class="choice-transport__text-fat">Заказ минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>900</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>30</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+              <div class="choice-transport__box">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Toyota Alphard</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">6</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Современный и стильный минивэн для поездок небольшой компанией.</p>
+                <p class="choice-transport__text-fat">Заказ минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>900</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>30</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+              <div class="choice-transport__box choice-transport__box--tab">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Toyota Alphard</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">6</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Современный и стильный минивэн для поездок небольшой компанией.</p>
+                <p class="choice-transport__text-fat">Заказ минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>900</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>30</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+            </div>
+
+            <button class="btn btn__more" type="button">Больше вариантов</button>
+
+            <h2 class="choice-transport__title">Автобусы</h2>
+            <div class="choice-transport__wrap">
+
+              <div class="choice-transport__box">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Toyota Alphard</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">6</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Современный и стильный минивэн для поездок небольшой компанией.</p>
+                <p class="choice-transport__text-fat">Заказ минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>900</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>30</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+              <div class="choice-transport__box">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Toyota Alphard</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">6</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Современный и стильный минивэн для поездок небольшой компанией.</p>
+                <p class="choice-transport__text-fat">Заказ минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>900</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>30</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+
+              <div class="choice-transport__box choice-transport__box--tab">
+                <div class="choice-transport__img"></div>
+                <div class="choice-transport__blue">
+                  <p class="choice-transport__name">Toyota Alphard</p>
+                  <p class="choice-transport__place">
+                    <span class="choice-transport__place-number">6</span>
+                    <span class="choice-transport__place-text">мест</span>
+                  </p>
+                </div>
+                <p class="choice-transport__text">Современный и стильный минивэн для поездок небольшой компанией.</p>
+                <p class="choice-transport__text-fat">Заказ минивэна от 3 часов по городу</p>
+                <div class="choice-transport__block">
+                  <p class="choice-transport__price-time">от <span>900</span> р/час</p>
+                  <p class="choice-transport__price-km">от <span>30</span> р/км</p>
+                </div>
+                <button class="btn btn__choice-transport btn__modal-cost" type="button">Заказать автобус</button>
+              </div>
+            </div>
+
+            <button class="btn btn__more" type="button">Больше вариантов</button>
+          </div>
+        </div>
+
+      </section>
+      <!--Клиенты-->
+      <section class="carry-employees container">
+        <h2 class="title title__carry-employees">Мы возим сотрудников <span>компаний</span></h2>
+
+        <div class="carry-employees__wrap">
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/1.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/2.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/3.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/4.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/5.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/6.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/7.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/8.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/9.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/10.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/11.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/12.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/13.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/14.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/15.svg" alt="icons" width="61" height="61">
+          </a>
+          <a class="carry-employees__link" href="#">
+            <img class="carry-employees__img" src="img/icons/16.svg" alt="icons" width="61" height="61">
+          </a>
+        </div>
+      </section>
+      <!--Отзывы и форма-->
+      <section class="reviews-cost container">
+
+        <div class="reviews">
+          <h2 class="title title__reviews">Отзывы</h2>
+
+          <div class="reviews__slider">
+
+            <input type="radio" id="i1" name="images" checked="">
+            <input type="radio" id="i2" name="images">
+            <input type="radio" id="i3" name="images">
+
+            <div class="reviews__slide" id="one">
+
+              <div class="reviews__block">
+                <p class="reviews__text">“Поставили транспорт вовремя. Отчетные документы получили быстро.”</p>
+                <div class="reviews__wrap">
+                  <div class="reviews__social social">
+                    <a class="reviews__social-link social-link reviews__social-link--vk" href="#">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.029 31.9996H24.6687C24.1674 31.9996 23.761 31.5931 23.761 31.0919C23.761 30.5907 24.1674 30.1842 24.6687 30.1842H27.029C28.7689 30.1842 30.1846 28.7687 30.1846 27.0287V4.97134C30.1846 3.23146 28.769 1.81581 27.029 1.81581H13.3984C12.8971 1.81581 12.4907 1.40938 12.4907 0.908149C12.4907 0.406914 12.8971 0.000488281 13.3984 0.000488281H27.0291C29.77 0.000488281 32 2.23036 32 4.97134V27.0288C31.9999 29.7697 29.77 31.9996 27.029 31.9996Z" fill="#102EDB"></path>
+                        <path d="M18.1055 31.9996H4.97098C2.22999 31.9996 0.00012207 29.7697 0.00012207 27.0287V4.97134C0.00012207 2.23036 2.22999 0.000488281 4.97098 0.000488281H7.01366C7.51496 0.000488281 7.92133 0.406914 7.92133 0.908149C7.92133 1.40938 7.51496 1.81581 7.01366 1.81581H4.97098C3.23109 1.81581 1.81544 3.23139 1.81544 4.97134V27.0288C1.81544 28.7687 3.23103 30.1844 4.97098 30.1844H18.1055C18.6067 30.1844 19.0131 30.5908 19.0131 31.092C19.0131 31.5933 18.6067 31.9996 18.1055 31.9996Z" fill="#102EDB"></path>
+                        <path d="M25.5984 22.2856C24.8614 22.2856 23.9599 22.2649 23.575 22.2561C23.459 22.2535 23.3835 22.2518 23.3629 22.2517C22.7461 22.2489 22.215 22.0375 21.7844 21.6231C21.435 21.287 21.0969 20.9194 20.7698 20.5638C20.5846 20.3627 20.3933 20.1546 20.2003 19.9526C20.0056 19.749 19.8224 19.5826 19.6398 19.4438C19.4029 19.2632 19.1504 19.1675 18.9103 19.1675C18.5133 19.1675 18.1863 19.4171 18.0133 19.8524C17.8145 20.3543 17.662 21.58 17.6563 21.6556C17.6318 21.9998 17.435 22.1768 17.0547 22.1976C16.8052 22.2111 16.5604 22.2181 16.3272 22.2181C14.8243 22.2181 13.5555 21.9298 12.4484 21.3367C11.3288 20.737 10.3249 19.8588 9.37953 18.6517C8.18512 17.1272 7.10953 15.3599 5.892 12.9216C5.83357 12.8046 4.8991 10.8123 4.80941 10.5875C4.78391 10.4829 4.77004 10.312 4.8586 10.2546C4.92603 10.2482 5.13134 10.2374 5.74413 10.2374C6.76598 10.2374 8.26975 10.2683 8.35293 10.2712C8.77392 10.294 9.00335 10.4597 9.16659 10.8622C9.87982 12.6233 10.729 14.1086 11.7628 15.4026C11.9195 15.5996 12.1242 15.7874 12.3546 15.9453C12.5162 16.0562 12.6897 16.1148 12.856 16.1148H12.856C13.1727 16.1148 13.4335 15.9125 13.5538 15.5733C13.6921 15.1874 13.8033 14.4772 13.8101 14.1005C13.8281 13.1765 13.8077 12.5738 13.7579 11.6489C13.7113 10.7937 13.3046 10.2827 12.516 10.0911C12.7559 9.83168 13.0827 9.76525 13.582 9.73856C13.8615 9.7235 14.1671 9.71613 14.5167 9.71613C14.8417 9.71613 15.1739 9.72231 15.4952 9.72838C15.721 9.73263 15.9466 9.73681 16.1721 9.73906C16.5444 9.74244 16.8669 9.775 17.159 9.83881C17.3365 9.8775 17.5807 9.97831 17.6528 10.4077C17.6897 10.6257 17.706 10.837 17.7013 11.0365C17.6921 11.4456 17.6783 11.8619 17.665 12.2644C17.6459 12.8432 17.626 13.4418 17.6192 14.0323C17.6138 14.4906 17.6528 14.913 17.735 15.2879C17.8438 15.7802 18.139 16.0739 18.5251 16.0739C18.6872 16.0739 18.936 16.0164 19.1999 15.7429C19.6178 15.3089 20.0214 14.8038 20.5084 14.1056C21.1437 13.1942 21.6925 12.1312 22.2355 10.76C22.4178 10.3012 22.4645 10.269 22.9497 10.2679C23.5865 10.2663 24.2231 10.2654 24.8599 10.2654C25.4186 10.2654 25.9775 10.2662 26.5363 10.2679C26.7493 10.2689 26.9213 10.2909 27.062 10.3355C27.1583 10.3662 27.2416 10.4109 27.1954 10.6143C27.0253 11.369 26.5891 12.0282 26.1937 12.5867C25.7133 13.2648 25.2079 13.9452 24.7191 14.6032C24.4617 14.9497 24.2044 15.2962 23.9492 15.6441C23.8556 15.7718 23.7657 15.9142 23.6666 16.092C23.3042 16.7477 23.3617 17.2075 23.8708 17.7333C24.1416 18.0124 24.4229 18.2871 24.6949 18.5524C25.079 18.9273 25.4762 19.3148 25.8406 19.7135C26.3013 20.2184 26.7069 20.7459 27.0459 21.281C27.2028 21.5288 27.2477 21.7688 27.1689 21.9391C27.0929 22.1037 26.898 22.2161 26.6198 22.2556C26.5398 22.2666 26.3001 22.2856 25.5984 22.2856Z" fill="#CEE8FA"></path>
+                        <path d="M25.5989 23.1898C24.8555 23.1898 23.9483 23.1691 23.561 23.1603C23.4506 23.1577 23.381 23.1561 23.3581 23.1559C22.5133 23.1521 21.7514 22.8471 21.1556 22.2737C20.7848 21.9167 20.4378 21.5396 20.1023 21.1748L20.0907 21.1621C19.9121 20.9683 19.7276 20.7678 19.5444 20.576C19.3835 20.4076 19.2351 20.2724 19.0909 20.1628C19.0075 20.0992 18.9463 20.0777 18.9206 20.0729C18.908 20.0866 18.8831 20.1192 18.8573 20.1842C18.7341 20.4952 18.5904 21.4454 18.5614 21.7274C18.501 22.5278 17.9434 23.0545 17.1048 23.1004C16.8382 23.1149 16.577 23.1223 16.3276 23.1223C14.6713 23.1223 13.2623 22.7988 12.0201 22.1333C10.7872 21.4729 9.68985 20.516 8.66532 19.2079C7.43204 17.6338 6.32633 15.819 5.0803 13.3237C5.02736 13.2177 4.07271 11.1862 3.96671 10.9202C3.9509 10.8807 3.93796 10.8401 3.92783 10.7987C3.79484 10.2524 3.96221 9.75084 4.36476 9.48966C4.48757 9.41003 4.62769 9.36122 4.77337 9.34753C4.82912 9.34216 4.99868 9.32622 5.74441 9.32622C6.79094 9.32622 8.29589 9.35753 8.38508 9.3606C8.39077 9.36085 8.39651 9.36103 8.4022 9.36141C9.17343 9.40316 9.71366 9.79208 10.0078 10.5175C10.6879 12.1967 11.494 13.608 12.4721 14.8326C12.5461 14.9258 12.6412 15.0192 12.7476 15.1041C12.8298 14.79 12.8983 14.32 12.9027 14.0806C12.9203 13.1834 12.9003 12.5963 12.8517 11.6942C12.8239 11.1851 12.6523 11.0549 12.3018 10.9697C11.9892 10.8937 11.7402 10.6579 11.6472 10.35C11.5543 10.042 11.6314 9.70784 11.8497 9.47159C12.3223 8.96055 12.9383 8.8608 13.5337 8.82899C13.8297 8.81299 14.1514 8.80518 14.517 8.80518C14.8523 8.80518 15.188 8.81142 15.5125 8.81761C15.7357 8.8218 15.9588 8.82599 16.1818 8.82824C16.6158 8.83211 16.9993 8.87161 17.3529 8.9488C17.9964 9.08885 18.4323 9.56453 18.5483 10.2538C18.5946 10.5279 18.6151 10.7975 18.6091 11.0545C18.5999 11.4605 18.5864 11.8723 18.5732 12.2705L18.5724 12.2911C18.5533 12.8702 18.5337 13.4613 18.527 14.0395C18.5227 14.4086 18.5512 14.7453 18.6116 15.0414C18.9725 14.6581 19.3313 14.2038 19.7641 13.583C20.3581 12.731 20.8753 11.7267 21.3918 10.4225C21.7116 9.61746 22.0896 9.35872 22.948 9.35691C24.1449 9.35391 25.3423 9.3531 26.5393 9.35691C26.8469 9.35816 27.1075 9.39422 27.337 9.46709C27.9221 9.65365 28.2207 10.1938 28.0808 10.8116C27.8742 11.7285 27.3808 12.4776 26.9346 13.1079C26.4495 13.7926 25.9425 14.4751 25.4523 15.1354C25.1915 15.4863 24.9353 15.8313 24.681 16.1778C24.6103 16.2743 24.5397 16.3866 24.4594 16.5308C24.2827 16.8504 24.3055 16.8739 24.5229 17.0985C24.7852 17.3689 25.0616 17.6387 25.3289 17.8995C25.7244 18.2856 26.1299 18.6813 26.5107 19.0977C27.0077 19.6424 27.4456 20.2121 27.8129 20.792C28.1379 21.3054 28.2036 21.861 27.9931 22.3165C27.8719 22.579 27.5488 23.037 26.7477 23.1509C26.6274 23.1674 26.3787 23.1898 25.5989 23.1898ZM18.9108 18.2563C19.3514 18.2563 19.794 18.4161 20.1907 18.7184C20.4108 18.8858 20.6291 19.0834 20.857 19.3219C21.0518 19.5258 21.2421 19.7325 21.4261 19.9325L21.438 19.9455C21.7555 20.2907 22.0834 20.6471 22.4143 20.9657C22.6746 21.2162 22.9864 21.3388 23.3673 21.3406C23.3894 21.3406 23.4711 21.3424 23.5961 21.3453C23.9834 21.3541 24.876 21.3744 25.5987 21.3744C25.7663 21.3744 25.9043 21.3732 26.0172 21.3716C25.7657 21.0149 25.482 20.6632 25.1703 20.3218C24.825 19.9441 24.4384 19.5667 24.0644 19.2017C23.7849 18.929 23.4995 18.6504 23.2193 18.3615C22.4283 17.5448 22.3149 16.6578 22.8723 15.6493C22.9918 15.4351 23.1009 15.2627 23.2171 15.104C23.4738 14.7542 23.7322 14.4063 23.9907 14.0583C24.4793 13.4004 24.9801 12.7261 25.4533 12.0583C25.6469 11.7848 25.8514 11.4853 26.0171 11.1706C25.0278 11.1684 24.0376 11.1694 23.0475 11.1717C22.4884 12.5707 21.9171 13.6688 21.2532 14.6211C20.7375 15.3605 20.306 15.8995 19.8539 16.369C19.3684 16.8724 18.8636 16.978 18.5253 16.978C17.708 16.978 17.05 16.39 16.849 15.4802C16.7516 15.0367 16.7056 14.5452 16.7118 14.0181C16.7187 13.4205 16.7386 12.8196 16.7578 12.2384L16.7587 12.2105C16.7718 11.8168 16.7852 11.41 16.7942 11.0125C16.7966 10.9096 16.791 10.8009 16.7772 10.6877C16.5936 10.6599 16.3915 10.6454 16.1641 10.6434C15.9349 10.641 15.7065 10.6368 15.4782 10.6325C15.1418 10.6262 14.7909 10.6194 14.456 10.6205C14.5743 10.9099 14.6447 11.2364 14.6643 11.5962C14.7153 12.5438 14.7363 13.1622 14.7176 14.1148C14.7094 14.5708 14.5831 15.3882 14.4084 15.8759C14.1586 16.5799 13.5634 17.0189 12.8561 17.0189C12.5057 17.0189 12.1547 16.9053 11.8412 16.6903C11.5375 16.4822 11.2646 16.231 11.0523 15.9638C9.96447 14.6019 9.07206 13.0429 8.32539 11.1994C8.32164 11.1902 8.31814 11.1821 8.31495 11.1748C8.3142 11.1747 8.31339 11.1746 8.3127 11.1746C8.17446 11.1708 7.00193 11.1473 6.06158 11.1425C6.33814 11.7377 6.659 12.4212 6.70475 12.5139C7.89353 14.8945 8.939 16.6141 10.0942 18.0885C10.9603 19.1944 11.8705 19.994 12.8771 20.5331C13.8491 21.0539 14.9777 21.307 16.3273 21.307C16.4756 21.307 16.6293 21.304 16.7866 21.2979C16.8461 20.8514 16.9781 19.9977 17.1696 19.5147C17.4832 18.7264 18.1339 18.2563 18.9108 18.2563Z" fill="#102EDB"></path>
+                      </svg>
+                    </a>
+                    <a class="reviews__social-link social-link reviews__social-link--fb" href="#">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.8173 19.248C22.8042 17.8997 21.7076 16.8136 20.3592 16.8136H18.1059V13.3963C18.1059 12.4421 18.8795 11.6686 19.8336 11.6686H20.6592C21.8801 11.6686 22.8698 10.6789 22.8698 9.458C22.8698 8.23713 21.8801 7.24738 20.6592 7.24738H18.6264C15.6236 7.24738 13.1894 9.68156 13.1894 12.6843V16.8135H11.5886C10.231 16.8135 9.13037 17.9141 9.13037 19.2718C9.13037 20.6294 10.2309 21.73 11.5886 21.73H13.1894V31.0921H18.106V21.7301H20.3592C21.7262 21.7301 22.8306 20.6149 22.8173 19.248Z" fill="#CEE8FA"></path>
+                        <path d="M18.1058 31.9995H13.1893C12.688 31.9995 12.2816 31.5932 12.2816 31.0919V22.6374H11.5885C9.73253 22.6374 8.22253 21.1275 8.22253 19.2715C8.22253 17.4155 9.73247 15.9055 11.5885 15.9055H12.2816V12.684C12.2816 9.18554 15.1278 6.33936 18.6262 6.33936H20.659C22.3785 6.33936 23.7773 7.73823 23.7773 9.45767C23.7773 11.177 22.3785 12.576 20.659 12.576H19.8335C19.3813 12.576 19.0135 12.9439 19.0135 13.396V15.9056H20.359C22.1971 15.9056 23.707 17.4009 23.7248 19.2389C23.7337 20.1441 23.3877 20.9969 22.7506 21.64C22.1135 22.2832 21.2642 22.6374 20.359 22.6374H19.0135V31.0919C19.0135 31.5932 18.6072 31.9995 18.1058 31.9995ZM14.0971 30.1842H17.1982V21.7297C17.1982 21.2284 17.6046 20.822 18.1059 20.822H20.3592C20.7762 20.822 21.1675 20.6588 21.4608 20.3625C21.7543 20.0662 21.9137 19.6734 21.9096 19.2564C21.9014 18.4097 21.2058 17.7208 20.3591 17.7208H18.1058C17.6045 17.7208 17.1982 17.3144 17.1982 16.8131V13.3958C17.1982 11.9427 18.3803 10.7604 19.8335 10.7604H20.6591C21.3775 10.7604 21.962 10.176 21.962 9.45748C21.962 8.73904 21.3776 8.15454 20.6591 8.15454H18.6263C16.1288 8.15454 14.097 10.1864 14.097 12.6838V16.813C14.097 17.3143 13.6907 17.7207 13.1893 17.7207H11.5885C10.7336 17.7207 10.038 18.4162 10.038 19.2713C10.038 20.1262 10.7336 20.8218 11.5885 20.8218H13.1893C13.6907 20.8218 14.097 21.2282 14.097 21.7295V30.1842H14.0971Z" fill="#102EDB"></path>
+                        <path d="M27.029 32H24.6686C24.1673 32 23.7609 31.5936 23.7609 31.0923C23.7609 30.591 24.1673 30.1846 24.6686 30.1846H27.029C28.7689 30.1846 30.1846 28.769 30.1846 27.029V4.971C30.1846 3.23106 28.769 1.81537 27.029 1.81537H13.3979C12.8966 1.81537 12.4902 1.409 12.4902 0.907687C12.4902 0.406375 12.8966 0 13.3979 0H27.029C29.77 0 32 2.22994 32 4.971V27.029C32 29.7701 29.77 32 27.029 32Z" fill="#102EDB"></path>
+                        <path d="M18.1059 32H4.97112C2.23006 32 0.00012207 29.7701 0.00012207 27.029V4.971C0.00012207 2.22994 2.23006 0 4.97112 0H7.01387C7.51518 0 7.92156 0.406375 7.92156 0.907687C7.92156 1.409 7.51518 1.81537 7.01387 1.81537H4.97112C3.23118 1.81537 1.8155 3.231 1.8155 4.971V27.029C1.8155 28.7689 3.23112 30.1846 4.97112 30.1846H18.1059C18.6072 30.1846 19.0136 30.591 19.0136 31.0923C19.0136 31.5936 18.6072 32 18.1059 32Z" fill="#102EDB"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="reviews__foto"></div>
+                </div>
+              </div>
+
+              <label class="reviews__prev" for="i3"><span></span></label>
+              <label class="reviews__next" for="i2"><span></span></label>
+
+            </div>
+
+            <div class="reviews__slide" id="two">
+
+              <div class="reviews__block">
+                <p class="reviews__text">“Поставили транспорт вовремя. Отчетные документы получили быстро.”</p>
+                <div class="reviews__wrap">
+                  <div class="reviews__social social">
+                    <a class="reviews__social-link social-link reviews__social-link--vk" href="#">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.029 31.9996H24.6687C24.1674 31.9996 23.761 31.5931 23.761 31.0919C23.761 30.5907 24.1674 30.1842 24.6687 30.1842H27.029C28.7689 30.1842 30.1846 28.7687 30.1846 27.0287V4.97134C30.1846 3.23146 28.769 1.81581 27.029 1.81581H13.3984C12.8971 1.81581 12.4907 1.40938 12.4907 0.908149C12.4907 0.406914 12.8971 0.000488281 13.3984 0.000488281H27.0291C29.77 0.000488281 32 2.23036 32 4.97134V27.0288C31.9999 29.7697 29.77 31.9996 27.029 31.9996Z" fill="#102EDB"></path>
+                        <path d="M18.1055 31.9996H4.97098C2.22999 31.9996 0.00012207 29.7697 0.00012207 27.0287V4.97134C0.00012207 2.23036 2.22999 0.000488281 4.97098 0.000488281H7.01366C7.51496 0.000488281 7.92133 0.406914 7.92133 0.908149C7.92133 1.40938 7.51496 1.81581 7.01366 1.81581H4.97098C3.23109 1.81581 1.81544 3.23139 1.81544 4.97134V27.0288C1.81544 28.7687 3.23103 30.1844 4.97098 30.1844H18.1055C18.6067 30.1844 19.0131 30.5908 19.0131 31.092C19.0131 31.5933 18.6067 31.9996 18.1055 31.9996Z" fill="#102EDB"></path>
+                        <path d="M25.5984 22.2856C24.8614 22.2856 23.9599 22.2649 23.575 22.2561C23.459 22.2535 23.3835 22.2518 23.3629 22.2517C22.7461 22.2489 22.215 22.0375 21.7844 21.6231C21.435 21.287 21.0969 20.9194 20.7698 20.5638C20.5846 20.3627 20.3933 20.1546 20.2003 19.9526C20.0056 19.749 19.8224 19.5826 19.6398 19.4438C19.4029 19.2632 19.1504 19.1675 18.9103 19.1675C18.5133 19.1675 18.1863 19.4171 18.0133 19.8524C17.8145 20.3543 17.662 21.58 17.6563 21.6556C17.6318 21.9998 17.435 22.1768 17.0547 22.1976C16.8052 22.2111 16.5604 22.2181 16.3272 22.2181C14.8243 22.2181 13.5555 21.9298 12.4484 21.3367C11.3288 20.737 10.3249 19.8588 9.37953 18.6517C8.18512 17.1272 7.10953 15.3599 5.892 12.9216C5.83357 12.8046 4.8991 10.8123 4.80941 10.5875C4.78391 10.4829 4.77004 10.312 4.8586 10.2546C4.92603 10.2482 5.13134 10.2374 5.74413 10.2374C6.76598 10.2374 8.26975 10.2683 8.35293 10.2712C8.77392 10.294 9.00335 10.4597 9.16659 10.8622C9.87982 12.6233 10.729 14.1086 11.7628 15.4026C11.9195 15.5996 12.1242 15.7874 12.3546 15.9453C12.5162 16.0562 12.6897 16.1148 12.856 16.1148H12.856C13.1727 16.1148 13.4335 15.9125 13.5538 15.5733C13.6921 15.1874 13.8033 14.4772 13.8101 14.1005C13.8281 13.1765 13.8077 12.5738 13.7579 11.6489C13.7113 10.7937 13.3046 10.2827 12.516 10.0911C12.7559 9.83168 13.0827 9.76525 13.582 9.73856C13.8615 9.7235 14.1671 9.71613 14.5167 9.71613C14.8417 9.71613 15.1739 9.72231 15.4952 9.72838C15.721 9.73263 15.9466 9.73681 16.1721 9.73906C16.5444 9.74244 16.8669 9.775 17.159 9.83881C17.3365 9.8775 17.5807 9.97831 17.6528 10.4077C17.6897 10.6257 17.706 10.837 17.7013 11.0365C17.6921 11.4456 17.6783 11.8619 17.665 12.2644C17.6459 12.8432 17.626 13.4418 17.6192 14.0323C17.6138 14.4906 17.6528 14.913 17.735 15.2879C17.8438 15.7802 18.139 16.0739 18.5251 16.0739C18.6872 16.0739 18.936 16.0164 19.1999 15.7429C19.6178 15.3089 20.0214 14.8038 20.5084 14.1056C21.1437 13.1942 21.6925 12.1312 22.2355 10.76C22.4178 10.3012 22.4645 10.269 22.9497 10.2679C23.5865 10.2663 24.2231 10.2654 24.8599 10.2654C25.4186 10.2654 25.9775 10.2662 26.5363 10.2679C26.7493 10.2689 26.9213 10.2909 27.062 10.3355C27.1583 10.3662 27.2416 10.4109 27.1954 10.6143C27.0253 11.369 26.5891 12.0282 26.1937 12.5867C25.7133 13.2648 25.2079 13.9452 24.7191 14.6032C24.4617 14.9497 24.2044 15.2962 23.9492 15.6441C23.8556 15.7718 23.7657 15.9142 23.6666 16.092C23.3042 16.7477 23.3617 17.2075 23.8708 17.7333C24.1416 18.0124 24.4229 18.2871 24.6949 18.5524C25.079 18.9273 25.4762 19.3148 25.8406 19.7135C26.3013 20.2184 26.7069 20.7459 27.0459 21.281C27.2028 21.5288 27.2477 21.7688 27.1689 21.9391C27.0929 22.1037 26.898 22.2161 26.6198 22.2556C26.5398 22.2666 26.3001 22.2856 25.5984 22.2856Z" fill="#CEE8FA"></path>
+                        <path d="M25.5989 23.1898C24.8555 23.1898 23.9483 23.1691 23.561 23.1603C23.4506 23.1577 23.381 23.1561 23.3581 23.1559C22.5133 23.1521 21.7514 22.8471 21.1556 22.2737C20.7848 21.9167 20.4378 21.5396 20.1023 21.1748L20.0907 21.1621C19.9121 20.9683 19.7276 20.7678 19.5444 20.576C19.3835 20.4076 19.2351 20.2724 19.0909 20.1628C19.0075 20.0992 18.9463 20.0777 18.9206 20.0729C18.908 20.0866 18.8831 20.1192 18.8573 20.1842C18.7341 20.4952 18.5904 21.4454 18.5614 21.7274C18.501 22.5278 17.9434 23.0545 17.1048 23.1004C16.8382 23.1149 16.577 23.1223 16.3276 23.1223C14.6713 23.1223 13.2623 22.7988 12.0201 22.1333C10.7872 21.4729 9.68985 20.516 8.66532 19.2079C7.43204 17.6338 6.32633 15.819 5.0803 13.3237C5.02736 13.2177 4.07271 11.1862 3.96671 10.9202C3.9509 10.8807 3.93796 10.8401 3.92783 10.7987C3.79484 10.2524 3.96221 9.75084 4.36476 9.48966C4.48757 9.41003 4.62769 9.36122 4.77337 9.34753C4.82912 9.34216 4.99868 9.32622 5.74441 9.32622C6.79094 9.32622 8.29589 9.35753 8.38508 9.3606C8.39077 9.36085 8.39651 9.36103 8.4022 9.36141C9.17343 9.40316 9.71366 9.79208 10.0078 10.5175C10.6879 12.1967 11.494 13.608 12.4721 14.8326C12.5461 14.9258 12.6412 15.0192 12.7476 15.1041C12.8298 14.79 12.8983 14.32 12.9027 14.0806C12.9203 13.1834 12.9003 12.5963 12.8517 11.6942C12.8239 11.1851 12.6523 11.0549 12.3018 10.9697C11.9892 10.8937 11.7402 10.6579 11.6472 10.35C11.5543 10.042 11.6314 9.70784 11.8497 9.47159C12.3223 8.96055 12.9383 8.8608 13.5337 8.82899C13.8297 8.81299 14.1514 8.80518 14.517 8.80518C14.8523 8.80518 15.188 8.81142 15.5125 8.81761C15.7357 8.8218 15.9588 8.82599 16.1818 8.82824C16.6158 8.83211 16.9993 8.87161 17.3529 8.9488C17.9964 9.08885 18.4323 9.56453 18.5483 10.2538C18.5946 10.5279 18.6151 10.7975 18.6091 11.0545C18.5999 11.4605 18.5864 11.8723 18.5732 12.2705L18.5724 12.2911C18.5533 12.8702 18.5337 13.4613 18.527 14.0395C18.5227 14.4086 18.5512 14.7453 18.6116 15.0414C18.9725 14.6581 19.3313 14.2038 19.7641 13.583C20.3581 12.731 20.8753 11.7267 21.3918 10.4225C21.7116 9.61746 22.0896 9.35872 22.948 9.35691C24.1449 9.35391 25.3423 9.3531 26.5393 9.35691C26.8469 9.35816 27.1075 9.39422 27.337 9.46709C27.9221 9.65365 28.2207 10.1938 28.0808 10.8116C27.8742 11.7285 27.3808 12.4776 26.9346 13.1079C26.4495 13.7926 25.9425 14.4751 25.4523 15.1354C25.1915 15.4863 24.9353 15.8313 24.681 16.1778C24.6103 16.2743 24.5397 16.3866 24.4594 16.5308C24.2827 16.8504 24.3055 16.8739 24.5229 17.0985C24.7852 17.3689 25.0616 17.6387 25.3289 17.8995C25.7244 18.2856 26.1299 18.6813 26.5107 19.0977C27.0077 19.6424 27.4456 20.2121 27.8129 20.792C28.1379 21.3054 28.2036 21.861 27.9931 22.3165C27.8719 22.579 27.5488 23.037 26.7477 23.1509C26.6274 23.1674 26.3787 23.1898 25.5989 23.1898ZM18.9108 18.2563C19.3514 18.2563 19.794 18.4161 20.1907 18.7184C20.4108 18.8858 20.6291 19.0834 20.857 19.3219C21.0518 19.5258 21.2421 19.7325 21.4261 19.9325L21.438 19.9455C21.7555 20.2907 22.0834 20.6471 22.4143 20.9657C22.6746 21.2162 22.9864 21.3388 23.3673 21.3406C23.3894 21.3406 23.4711 21.3424 23.5961 21.3453C23.9834 21.3541 24.876 21.3744 25.5987 21.3744C25.7663 21.3744 25.9043 21.3732 26.0172 21.3716C25.7657 21.0149 25.482 20.6632 25.1703 20.3218C24.825 19.9441 24.4384 19.5667 24.0644 19.2017C23.7849 18.929 23.4995 18.6504 23.2193 18.3615C22.4283 17.5448 22.3149 16.6578 22.8723 15.6493C22.9918 15.4351 23.1009 15.2627 23.2171 15.104C23.4738 14.7542 23.7322 14.4063 23.9907 14.0583C24.4793 13.4004 24.9801 12.7261 25.4533 12.0583C25.6469 11.7848 25.8514 11.4853 26.0171 11.1706C25.0278 11.1684 24.0376 11.1694 23.0475 11.1717C22.4884 12.5707 21.9171 13.6688 21.2532 14.6211C20.7375 15.3605 20.306 15.8995 19.8539 16.369C19.3684 16.8724 18.8636 16.978 18.5253 16.978C17.708 16.978 17.05 16.39 16.849 15.4802C16.7516 15.0367 16.7056 14.5452 16.7118 14.0181C16.7187 13.4205 16.7386 12.8196 16.7578 12.2384L16.7587 12.2105C16.7718 11.8168 16.7852 11.41 16.7942 11.0125C16.7966 10.9096 16.791 10.8009 16.7772 10.6877C16.5936 10.6599 16.3915 10.6454 16.1641 10.6434C15.9349 10.641 15.7065 10.6368 15.4782 10.6325C15.1418 10.6262 14.7909 10.6194 14.456 10.6205C14.5743 10.9099 14.6447 11.2364 14.6643 11.5962C14.7153 12.5438 14.7363 13.1622 14.7176 14.1148C14.7094 14.5708 14.5831 15.3882 14.4084 15.8759C14.1586 16.5799 13.5634 17.0189 12.8561 17.0189C12.5057 17.0189 12.1547 16.9053 11.8412 16.6903C11.5375 16.4822 11.2646 16.231 11.0523 15.9638C9.96447 14.6019 9.07206 13.0429 8.32539 11.1994C8.32164 11.1902 8.31814 11.1821 8.31495 11.1748C8.3142 11.1747 8.31339 11.1746 8.3127 11.1746C8.17446 11.1708 7.00193 11.1473 6.06158 11.1425C6.33814 11.7377 6.659 12.4212 6.70475 12.5139C7.89353 14.8945 8.939 16.6141 10.0942 18.0885C10.9603 19.1944 11.8705 19.994 12.8771 20.5331C13.8491 21.0539 14.9777 21.307 16.3273 21.307C16.4756 21.307 16.6293 21.304 16.7866 21.2979C16.8461 20.8514 16.9781 19.9977 17.1696 19.5147C17.4832 18.7264 18.1339 18.2563 18.9108 18.2563Z" fill="#102EDB"></path>
+                      </svg>
+                    </a>
+                    <a class="reviews__social-link social-link reviews__social-link--fb" href="#">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.8173 19.248C22.8042 17.8997 21.7076 16.8136 20.3592 16.8136H18.1059V13.3963C18.1059 12.4421 18.8795 11.6686 19.8336 11.6686H20.6592C21.8801 11.6686 22.8698 10.6789 22.8698 9.458C22.8698 8.23713 21.8801 7.24738 20.6592 7.24738H18.6264C15.6236 7.24738 13.1894 9.68156 13.1894 12.6843V16.8135H11.5886C10.231 16.8135 9.13037 17.9141 9.13037 19.2718C9.13037 20.6294 10.2309 21.73 11.5886 21.73H13.1894V31.0921H18.106V21.7301H20.3592C21.7262 21.7301 22.8306 20.6149 22.8173 19.248Z" fill="#CEE8FA"></path>
+                        <path d="M18.1058 31.9995H13.1893C12.688 31.9995 12.2816 31.5932 12.2816 31.0919V22.6374H11.5885C9.73253 22.6374 8.22253 21.1275 8.22253 19.2715C8.22253 17.4155 9.73247 15.9055 11.5885 15.9055H12.2816V12.684C12.2816 9.18554 15.1278 6.33936 18.6262 6.33936H20.659C22.3785 6.33936 23.7773 7.73823 23.7773 9.45767C23.7773 11.177 22.3785 12.576 20.659 12.576H19.8335C19.3813 12.576 19.0135 12.9439 19.0135 13.396V15.9056H20.359C22.1971 15.9056 23.707 17.4009 23.7248 19.2389C23.7337 20.1441 23.3877 20.9969 22.7506 21.64C22.1135 22.2832 21.2642 22.6374 20.359 22.6374H19.0135V31.0919C19.0135 31.5932 18.6072 31.9995 18.1058 31.9995ZM14.0971 30.1842H17.1982V21.7297C17.1982 21.2284 17.6046 20.822 18.1059 20.822H20.3592C20.7762 20.822 21.1675 20.6588 21.4608 20.3625C21.7543 20.0662 21.9137 19.6734 21.9096 19.2564C21.9014 18.4097 21.2058 17.7208 20.3591 17.7208H18.1058C17.6045 17.7208 17.1982 17.3144 17.1982 16.8131V13.3958C17.1982 11.9427 18.3803 10.7604 19.8335 10.7604H20.6591C21.3775 10.7604 21.962 10.176 21.962 9.45748C21.962 8.73904 21.3776 8.15454 20.6591 8.15454H18.6263C16.1288 8.15454 14.097 10.1864 14.097 12.6838V16.813C14.097 17.3143 13.6907 17.7207 13.1893 17.7207H11.5885C10.7336 17.7207 10.038 18.4162 10.038 19.2713C10.038 20.1262 10.7336 20.8218 11.5885 20.8218H13.1893C13.6907 20.8218 14.097 21.2282 14.097 21.7295V30.1842H14.0971Z" fill="#102EDB"></path>
+                        <path d="M27.029 32H24.6686C24.1673 32 23.7609 31.5936 23.7609 31.0923C23.7609 30.591 24.1673 30.1846 24.6686 30.1846H27.029C28.7689 30.1846 30.1846 28.769 30.1846 27.029V4.971C30.1846 3.23106 28.769 1.81537 27.029 1.81537H13.3979C12.8966 1.81537 12.4902 1.409 12.4902 0.907687C12.4902 0.406375 12.8966 0 13.3979 0H27.029C29.77 0 32 2.22994 32 4.971V27.029C32 29.7701 29.77 32 27.029 32Z" fill="#102EDB"></path>
+                        <path d="M18.1059 32H4.97112C2.23006 32 0.00012207 29.7701 0.00012207 27.029V4.971C0.00012207 2.22994 2.23006 0 4.97112 0H7.01387C7.51518 0 7.92156 0.406375 7.92156 0.907687C7.92156 1.409 7.51518 1.81537 7.01387 1.81537H4.97112C3.23118 1.81537 1.8155 3.231 1.8155 4.971V27.029C1.8155 28.7689 3.23112 30.1846 4.97112 30.1846H18.1059C18.6072 30.1846 19.0136 30.591 19.0136 31.0923C19.0136 31.5936 18.6072 32 18.1059 32Z" fill="#102EDB"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="reviews__foto"></div>
+                </div>
+              </div>
+
+              <label class="reviews__prev" for="i1"><span></span></label>
+              <label class="reviews__next" for="i3"><span></span></label>
+
+            </div>
+
+            <div class="reviews__slide" id="three">
+
+              <div class="reviews__block">
+                <p class="reviews__text">“Поставили транспорт вовремя. Отчетные документы получили быстро.”</p>
+                <div class="reviews__wrap">
+                  <div class="reviews__social social">
+                    <a class="reviews__social-link social-link reviews__social-link--vk" href="#">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.029 31.9996H24.6687C24.1674 31.9996 23.761 31.5931 23.761 31.0919C23.761 30.5907 24.1674 30.1842 24.6687 30.1842H27.029C28.7689 30.1842 30.1846 28.7687 30.1846 27.0287V4.97134C30.1846 3.23146 28.769 1.81581 27.029 1.81581H13.3984C12.8971 1.81581 12.4907 1.40938 12.4907 0.908149C12.4907 0.406914 12.8971 0.000488281 13.3984 0.000488281H27.0291C29.77 0.000488281 32 2.23036 32 4.97134V27.0288C31.9999 29.7697 29.77 31.9996 27.029 31.9996Z" fill="#102EDB"></path>
+                        <path d="M18.1055 31.9996H4.97098C2.22999 31.9996 0.00012207 29.7697 0.00012207 27.0287V4.97134C0.00012207 2.23036 2.22999 0.000488281 4.97098 0.000488281H7.01366C7.51496 0.000488281 7.92133 0.406914 7.92133 0.908149C7.92133 1.40938 7.51496 1.81581 7.01366 1.81581H4.97098C3.23109 1.81581 1.81544 3.23139 1.81544 4.97134V27.0288C1.81544 28.7687 3.23103 30.1844 4.97098 30.1844H18.1055C18.6067 30.1844 19.0131 30.5908 19.0131 31.092C19.0131 31.5933 18.6067 31.9996 18.1055 31.9996Z" fill="#102EDB"></path>
+                        <path d="M25.5984 22.2856C24.8614 22.2856 23.9599 22.2649 23.575 22.2561C23.459 22.2535 23.3835 22.2518 23.3629 22.2517C22.7461 22.2489 22.215 22.0375 21.7844 21.6231C21.435 21.287 21.0969 20.9194 20.7698 20.5638C20.5846 20.3627 20.3933 20.1546 20.2003 19.9526C20.0056 19.749 19.8224 19.5826 19.6398 19.4438C19.4029 19.2632 19.1504 19.1675 18.9103 19.1675C18.5133 19.1675 18.1863 19.4171 18.0133 19.8524C17.8145 20.3543 17.662 21.58 17.6563 21.6556C17.6318 21.9998 17.435 22.1768 17.0547 22.1976C16.8052 22.2111 16.5604 22.2181 16.3272 22.2181C14.8243 22.2181 13.5555 21.9298 12.4484 21.3367C11.3288 20.737 10.3249 19.8588 9.37953 18.6517C8.18512 17.1272 7.10953 15.3599 5.892 12.9216C5.83357 12.8046 4.8991 10.8123 4.80941 10.5875C4.78391 10.4829 4.77004 10.312 4.8586 10.2546C4.92603 10.2482 5.13134 10.2374 5.74413 10.2374C6.76598 10.2374 8.26975 10.2683 8.35293 10.2712C8.77392 10.294 9.00335 10.4597 9.16659 10.8622C9.87982 12.6233 10.729 14.1086 11.7628 15.4026C11.9195 15.5996 12.1242 15.7874 12.3546 15.9453C12.5162 16.0562 12.6897 16.1148 12.856 16.1148H12.856C13.1727 16.1148 13.4335 15.9125 13.5538 15.5733C13.6921 15.1874 13.8033 14.4772 13.8101 14.1005C13.8281 13.1765 13.8077 12.5738 13.7579 11.6489C13.7113 10.7937 13.3046 10.2827 12.516 10.0911C12.7559 9.83168 13.0827 9.76525 13.582 9.73856C13.8615 9.7235 14.1671 9.71613 14.5167 9.71613C14.8417 9.71613 15.1739 9.72231 15.4952 9.72838C15.721 9.73263 15.9466 9.73681 16.1721 9.73906C16.5444 9.74244 16.8669 9.775 17.159 9.83881C17.3365 9.8775 17.5807 9.97831 17.6528 10.4077C17.6897 10.6257 17.706 10.837 17.7013 11.0365C17.6921 11.4456 17.6783 11.8619 17.665 12.2644C17.6459 12.8432 17.626 13.4418 17.6192 14.0323C17.6138 14.4906 17.6528 14.913 17.735 15.2879C17.8438 15.7802 18.139 16.0739 18.5251 16.0739C18.6872 16.0739 18.936 16.0164 19.1999 15.7429C19.6178 15.3089 20.0214 14.8038 20.5084 14.1056C21.1437 13.1942 21.6925 12.1312 22.2355 10.76C22.4178 10.3012 22.4645 10.269 22.9497 10.2679C23.5865 10.2663 24.2231 10.2654 24.8599 10.2654C25.4186 10.2654 25.9775 10.2662 26.5363 10.2679C26.7493 10.2689 26.9213 10.2909 27.062 10.3355C27.1583 10.3662 27.2416 10.4109 27.1954 10.6143C27.0253 11.369 26.5891 12.0282 26.1937 12.5867C25.7133 13.2648 25.2079 13.9452 24.7191 14.6032C24.4617 14.9497 24.2044 15.2962 23.9492 15.6441C23.8556 15.7718 23.7657 15.9142 23.6666 16.092C23.3042 16.7477 23.3617 17.2075 23.8708 17.7333C24.1416 18.0124 24.4229 18.2871 24.6949 18.5524C25.079 18.9273 25.4762 19.3148 25.8406 19.7135C26.3013 20.2184 26.7069 20.7459 27.0459 21.281C27.2028 21.5288 27.2477 21.7688 27.1689 21.9391C27.0929 22.1037 26.898 22.2161 26.6198 22.2556C26.5398 22.2666 26.3001 22.2856 25.5984 22.2856Z" fill="#CEE8FA"></path>
+                        <path d="M25.5989 23.1898C24.8555 23.1898 23.9483 23.1691 23.561 23.1603C23.4506 23.1577 23.381 23.1561 23.3581 23.1559C22.5133 23.1521 21.7514 22.8471 21.1556 22.2737C20.7848 21.9167 20.4378 21.5396 20.1023 21.1748L20.0907 21.1621C19.9121 20.9683 19.7276 20.7678 19.5444 20.576C19.3835 20.4076 19.2351 20.2724 19.0909 20.1628C19.0075 20.0992 18.9463 20.0777 18.9206 20.0729C18.908 20.0866 18.8831 20.1192 18.8573 20.1842C18.7341 20.4952 18.5904 21.4454 18.5614 21.7274C18.501 22.5278 17.9434 23.0545 17.1048 23.1004C16.8382 23.1149 16.577 23.1223 16.3276 23.1223C14.6713 23.1223 13.2623 22.7988 12.0201 22.1333C10.7872 21.4729 9.68985 20.516 8.66532 19.2079C7.43204 17.6338 6.32633 15.819 5.0803 13.3237C5.02736 13.2177 4.07271 11.1862 3.96671 10.9202C3.9509 10.8807 3.93796 10.8401 3.92783 10.7987C3.79484 10.2524 3.96221 9.75084 4.36476 9.48966C4.48757 9.41003 4.62769 9.36122 4.77337 9.34753C4.82912 9.34216 4.99868 9.32622 5.74441 9.32622C6.79094 9.32622 8.29589 9.35753 8.38508 9.3606C8.39077 9.36085 8.39651 9.36103 8.4022 9.36141C9.17343 9.40316 9.71366 9.79208 10.0078 10.5175C10.6879 12.1967 11.494 13.608 12.4721 14.8326C12.5461 14.9258 12.6412 15.0192 12.7476 15.1041C12.8298 14.79 12.8983 14.32 12.9027 14.0806C12.9203 13.1834 12.9003 12.5963 12.8517 11.6942C12.8239 11.1851 12.6523 11.0549 12.3018 10.9697C11.9892 10.8937 11.7402 10.6579 11.6472 10.35C11.5543 10.042 11.6314 9.70784 11.8497 9.47159C12.3223 8.96055 12.9383 8.8608 13.5337 8.82899C13.8297 8.81299 14.1514 8.80518 14.517 8.80518C14.8523 8.80518 15.188 8.81142 15.5125 8.81761C15.7357 8.8218 15.9588 8.82599 16.1818 8.82824C16.6158 8.83211 16.9993 8.87161 17.3529 8.9488C17.9964 9.08885 18.4323 9.56453 18.5483 10.2538C18.5946 10.5279 18.6151 10.7975 18.6091 11.0545C18.5999 11.4605 18.5864 11.8723 18.5732 12.2705L18.5724 12.2911C18.5533 12.8702 18.5337 13.4613 18.527 14.0395C18.5227 14.4086 18.5512 14.7453 18.6116 15.0414C18.9725 14.6581 19.3313 14.2038 19.7641 13.583C20.3581 12.731 20.8753 11.7267 21.3918 10.4225C21.7116 9.61746 22.0896 9.35872 22.948 9.35691C24.1449 9.35391 25.3423 9.3531 26.5393 9.35691C26.8469 9.35816 27.1075 9.39422 27.337 9.46709C27.9221 9.65365 28.2207 10.1938 28.0808 10.8116C27.8742 11.7285 27.3808 12.4776 26.9346 13.1079C26.4495 13.7926 25.9425 14.4751 25.4523 15.1354C25.1915 15.4863 24.9353 15.8313 24.681 16.1778C24.6103 16.2743 24.5397 16.3866 24.4594 16.5308C24.2827 16.8504 24.3055 16.8739 24.5229 17.0985C24.7852 17.3689 25.0616 17.6387 25.3289 17.8995C25.7244 18.2856 26.1299 18.6813 26.5107 19.0977C27.0077 19.6424 27.4456 20.2121 27.8129 20.792C28.1379 21.3054 28.2036 21.861 27.9931 22.3165C27.8719 22.579 27.5488 23.037 26.7477 23.1509C26.6274 23.1674 26.3787 23.1898 25.5989 23.1898ZM18.9108 18.2563C19.3514 18.2563 19.794 18.4161 20.1907 18.7184C20.4108 18.8858 20.6291 19.0834 20.857 19.3219C21.0518 19.5258 21.2421 19.7325 21.4261 19.9325L21.438 19.9455C21.7555 20.2907 22.0834 20.6471 22.4143 20.9657C22.6746 21.2162 22.9864 21.3388 23.3673 21.3406C23.3894 21.3406 23.4711 21.3424 23.5961 21.3453C23.9834 21.3541 24.876 21.3744 25.5987 21.3744C25.7663 21.3744 25.9043 21.3732 26.0172 21.3716C25.7657 21.0149 25.482 20.6632 25.1703 20.3218C24.825 19.9441 24.4384 19.5667 24.0644 19.2017C23.7849 18.929 23.4995 18.6504 23.2193 18.3615C22.4283 17.5448 22.3149 16.6578 22.8723 15.6493C22.9918 15.4351 23.1009 15.2627 23.2171 15.104C23.4738 14.7542 23.7322 14.4063 23.9907 14.0583C24.4793 13.4004 24.9801 12.7261 25.4533 12.0583C25.6469 11.7848 25.8514 11.4853 26.0171 11.1706C25.0278 11.1684 24.0376 11.1694 23.0475 11.1717C22.4884 12.5707 21.9171 13.6688 21.2532 14.6211C20.7375 15.3605 20.306 15.8995 19.8539 16.369C19.3684 16.8724 18.8636 16.978 18.5253 16.978C17.708 16.978 17.05 16.39 16.849 15.4802C16.7516 15.0367 16.7056 14.5452 16.7118 14.0181C16.7187 13.4205 16.7386 12.8196 16.7578 12.2384L16.7587 12.2105C16.7718 11.8168 16.7852 11.41 16.7942 11.0125C16.7966 10.9096 16.791 10.8009 16.7772 10.6877C16.5936 10.6599 16.3915 10.6454 16.1641 10.6434C15.9349 10.641 15.7065 10.6368 15.4782 10.6325C15.1418 10.6262 14.7909 10.6194 14.456 10.6205C14.5743 10.9099 14.6447 11.2364 14.6643 11.5962C14.7153 12.5438 14.7363 13.1622 14.7176 14.1148C14.7094 14.5708 14.5831 15.3882 14.4084 15.8759C14.1586 16.5799 13.5634 17.0189 12.8561 17.0189C12.5057 17.0189 12.1547 16.9053 11.8412 16.6903C11.5375 16.4822 11.2646 16.231 11.0523 15.9638C9.96447 14.6019 9.07206 13.0429 8.32539 11.1994C8.32164 11.1902 8.31814 11.1821 8.31495 11.1748C8.3142 11.1747 8.31339 11.1746 8.3127 11.1746C8.17446 11.1708 7.00193 11.1473 6.06158 11.1425C6.33814 11.7377 6.659 12.4212 6.70475 12.5139C7.89353 14.8945 8.939 16.6141 10.0942 18.0885C10.9603 19.1944 11.8705 19.994 12.8771 20.5331C13.8491 21.0539 14.9777 21.307 16.3273 21.307C16.4756 21.307 16.6293 21.304 16.7866 21.2979C16.8461 20.8514 16.9781 19.9977 17.1696 19.5147C17.4832 18.7264 18.1339 18.2563 18.9108 18.2563Z" fill="#102EDB"></path>
+                      </svg>
+                    </a>
+                    <a class="reviews__social-link reviews__social-link--fb" href="#">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.8173 19.248C22.8042 17.8997 21.7076 16.8136 20.3592 16.8136H18.1059V13.3963C18.1059 12.4421 18.8795 11.6686 19.8336 11.6686H20.6592C21.8801 11.6686 22.8698 10.6789 22.8698 9.458C22.8698 8.23713 21.8801 7.24738 20.6592 7.24738H18.6264C15.6236 7.24738 13.1894 9.68156 13.1894 12.6843V16.8135H11.5886C10.231 16.8135 9.13037 17.9141 9.13037 19.2718C9.13037 20.6294 10.2309 21.73 11.5886 21.73H13.1894V31.0921H18.106V21.7301H20.3592C21.7262 21.7301 22.8306 20.6149 22.8173 19.248Z" fill="#CEE8FA"></path>
+                        <path d="M18.1058 31.9995H13.1893C12.688 31.9995 12.2816 31.5932 12.2816 31.0919V22.6374H11.5885C9.73253 22.6374 8.22253 21.1275 8.22253 19.2715C8.22253 17.4155 9.73247 15.9055 11.5885 15.9055H12.2816V12.684C12.2816 9.18554 15.1278 6.33936 18.6262 6.33936H20.659C22.3785 6.33936 23.7773 7.73823 23.7773 9.45767C23.7773 11.177 22.3785 12.576 20.659 12.576H19.8335C19.3813 12.576 19.0135 12.9439 19.0135 13.396V15.9056H20.359C22.1971 15.9056 23.707 17.4009 23.7248 19.2389C23.7337 20.1441 23.3877 20.9969 22.7506 21.64C22.1135 22.2832 21.2642 22.6374 20.359 22.6374H19.0135V31.0919C19.0135 31.5932 18.6072 31.9995 18.1058 31.9995ZM14.0971 30.1842H17.1982V21.7297C17.1982 21.2284 17.6046 20.822 18.1059 20.822H20.3592C20.7762 20.822 21.1675 20.6588 21.4608 20.3625C21.7543 20.0662 21.9137 19.6734 21.9096 19.2564C21.9014 18.4097 21.2058 17.7208 20.3591 17.7208H18.1058C17.6045 17.7208 17.1982 17.3144 17.1982 16.8131V13.3958C17.1982 11.9427 18.3803 10.7604 19.8335 10.7604H20.6591C21.3775 10.7604 21.962 10.176 21.962 9.45748C21.962 8.73904 21.3776 8.15454 20.6591 8.15454H18.6263C16.1288 8.15454 14.097 10.1864 14.097 12.6838V16.813C14.097 17.3143 13.6907 17.7207 13.1893 17.7207H11.5885C10.7336 17.7207 10.038 18.4162 10.038 19.2713C10.038 20.1262 10.7336 20.8218 11.5885 20.8218H13.1893C13.6907 20.8218 14.097 21.2282 14.097 21.7295V30.1842H14.0971Z" fill="#102EDB"></path>
+                        <path d="M27.029 32H24.6686C24.1673 32 23.7609 31.5936 23.7609 31.0923C23.7609 30.591 24.1673 30.1846 24.6686 30.1846H27.029C28.7689 30.1846 30.1846 28.769 30.1846 27.029V4.971C30.1846 3.23106 28.769 1.81537 27.029 1.81537H13.3979C12.8966 1.81537 12.4902 1.409 12.4902 0.907687C12.4902 0.406375 12.8966 0 13.3979 0H27.029C29.77 0 32 2.22994 32 4.971V27.029C32 29.7701 29.77 32 27.029 32Z" fill="#102EDB"></path>
+                        <path d="M18.1059 32H4.97112C2.23006 32 0.00012207 29.7701 0.00012207 27.029V4.971C0.00012207 2.22994 2.23006 0 4.97112 0H7.01387C7.51518 0 7.92156 0.406375 7.92156 0.907687C7.92156 1.409 7.51518 1.81537 7.01387 1.81537H4.97112C3.23118 1.81537 1.8155 3.231 1.8155 4.971V27.029C1.8155 28.7689 3.23112 30.1846 4.97112 30.1846H18.1059C18.6072 30.1846 19.0136 30.591 19.0136 31.0923C19.0136 31.5936 18.6072 32 18.1059 32Z" fill="#102EDB"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="reviews__foto"></div>
+                </div>
+              </div>
+
+              <label class="reviews__prev" for="i2"><span></span></label>
+              <label class="reviews__next" for="i3"><span></span></label>
+            </div>
+
+
+            <div id="nav_slide">
+              <label for="i1" class="reviews__dots" id="dot1"></label>
+              <label for="i2" class="reviews__dots" id="dot2"></label>
+              <label for="i3" class="reviews__dots" id="dot3"></label>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="cost">
+          <h2 class="title title__cost">Экспресс расчет стоимости</h2>
+          <p class="cost__text">Специалист подберет для вас транспорт за 2 минуты</p>
+
+          <form class="cost__form" action="https://echo.htmlacademy.ru" method="POST">
+            <div class="cost__form-wrap bus-pickup__form-wrap">
+              <label class="cost__form-label bus-pickup__form-label" for="cost-name">Имя</label>
+              <input class="cost__form-input bus-pickup__form-input" type="text" id="cost-name" name="cost-name" placeholder="Александр" required="">
+            </div>
+
+            <div class="cost__form-wrap bus-pickup__form-wrap">
+              <label class="cost__form-label bus-pickup__form-label" for="cost-phone">Телефон</label>
+              <input class="cost__form-input bus-pickup__form-input" type="tel" id="cost-phone" name="cost-phone" placeholder="+7 909 453 268" required="">
+            </div>
+
+            <div class="cost__form-wrap bus-pickup__form-wrap">
+              <label class="cost__form-label bus-pickup__form-label" for="cost-city">Выберите город</label>
+              <select class="cost__form-select bus-pickup__form-select" id="cost-city" name="cost-city" required="">
+                <option disabled="" selected="" value="">&mdash;</option>
+                <option>Архангельск</option>
+                <option>Астрахань</option>
+                <option>Барнаул</option>
+                <option>Белгород</option>
+                <option>Брянск</option>
+                <option>Великий Новгород</option>
+                <option>Владивосток</option>
+                <option>Владикавказ</option>
+                <option>Владимир</option>
+                <option>Волгоград</option>
+                <option>Волжский</option>
+                <option>Вологда</option>
+                <option>Воронеж</option>
+                <option>Евпатория</option>
+                <option>Екатеринбург</option>
+                <option>Иваново</option>
+                <option>Ижевск</option>
+                <option>Иркутск</option>
+                <option>Казань</option>
+                <option>Калининград</option>
+                <option>Калуга</option>
+                <option>Кемерово</option>
+                <option>Керчь</option>
+                <option>Киров</option>
+                <option>Краснодар</option>
+                <option>Красноярск</option>
+                <option>Курган</option>
+                <option>Курск</option>
+                <option>Липецк</option>
+                <option>Магнитогорск</option>
+                <option>Махачкала</option>
+                <option>Москва</option>
+                <option>Мурманск</option>
+                <option>Набережные Челны</option>
+                <option>Нижний Новгород</option>
+                <option>Нижний Тагил</option>
+                <option>Новокузнецк</option>
+                <option>Новороссийск</option>
+                <option>Новосибирск</option>
+                <option>Омск</option>
+                <option>Орёл</option>
+                <option>Оренбург</option>
+                <option>Пенза</option>
+                <option>Пермь</option>
+                <option>Петрозаводск</option>
+                <option>Псков</option>
+                <option>Ростов-на-Дону</option>
+                <option>Рязань</option>
+                <option>Самара</option>
+                <option>Санкт-Петербург</option>
+                <option>Саранск</option>
+                <option>Саратов</option>
+                <option>Севастополь</option>
+                <option>Симферополь</option>
+                <option>Смоленск</option>
+                <option>Сочи</option>
+                <option>Ставрополь</option>
+                <option>Сургут</option>
+                <option>Тверь</option>
+                <option>Тольятти</option>
+                <option>Томск</option>
+                <option>Тула</option>
+                <option>Тюмень</option>
+                <option>Улан-Удэ</option>
+                <option>Ульяновск</option>
+                <option>Уфа</option>
+                <option>Феодосия</option>
+                <option>Хабаровск</option>
+                <option>Чебоксары</option>
+                <option>Челябинск</option>
+                <option>Череповец</option>
+                <option>Чита</option>
+                <option>Якутск</option>
+                <option>Ялта</option>
+                <option>Ярославль</option>
+              </select>
+            </div>
+
+            <div class="cost__form-wrap bus-pickup__form-wrap">
+              <label class="cost__form-label bus-pickup__form-label" for="cost-transport">Выберите транспорт</label>
+              <select class="cost__form-select bus-pickup__form-select" id="cost-transport" name="cost-transport" required="">
+                <option disabled="" selected="" value="">&mdash;</option>
+                <option>Toyota Alphard</option>
+                <option>Мерседес Viano</option>
+                <option>Mercedes Benz Vito</option>
+                <option>Газель</option>
+                <option>Mercedes Istana</option>
+                <option>Газель Next</option>
+              </select>
+            </div>
+
+            <div class="cost__form-wrap bus-pickup__form-wrap">
+              <label class="cost__form-label bus-pickup__form-label" for="cost-datetime">Напишите дату и время</label>
+              <input class="cost__form-input bus-pickup__form-input" type="datetime-local" value="2019-07-05T08:00" min="2019-01-01T00:00" max="2019-12-31T00:00" id="cost-datetime" name="cost-datetime" required="">
+            </div>
+
+            <input class="cost__form-check-in bus-pickup__form-check-in" type="checkbox" id="cost-check" name="cost-check" required="">
+            <label class="cost__form-label cost__form-check bus-pickup__form-check-leb" for="cost-check">
+              <span>Согласен с обработкой данных</span>
+            </label>
+
+            <button class="btn btn__form btn__form--cost btn__modal-payment" type="submit">Получить расчет</button>
+            <p class="cost__form-text-min bus-pickup__form-text-min">Вам перезвонят в течение 2х минут – 24/7</p>
+          </form>
+        </div>
+
+      </section>
+      <!--О компании-->
+      <section class="welcome container">
+        <div class="welcome__wrapper">
+          <div class="welcome__block-text">
+            <h2 class="title title__welcome">Добро пожаловать<br> в онлайн компанию проката автобусов</h2>
+            <p class="welcome__text">Наша цель - помочь быстро найти автобус для дорожного путешествия клиентам в любой точке Росси и СНГ.</p>
+          </div>
+          <div class="welcome__wrap">
+            <picture class="welcome__box-picture">
+              <source media="(min-width: 768px)" srcset="img/license.jpg">
+              <img class="welcome__img welcome__img--license" src="img/license.jpg" alt="license">
+            </picture>
+            <picture class="welcome__box-picture">
+              <source media="(min-width: 768px)" srcset="img/resolution.jpg">
+              <img class="welcome__img welcome__img--resolution" src="img/resolution.jpg" alt="resolution">
+            </picture>
+          </div>
+        </div>
+        <div class="welcome__block">
+          <div class="welcome__box">
+            <picture class="welcome__box-picture">
+              <source media="(min-width: 768px)" srcset="img/passenger.png">
+              <img class="welcome__box-img welcome__box-img--passenger" src="img/passenger-mobile.png" alt="passenger">
+            </picture>
+            <p class="welcome__box-title">35 000 пассажиров</p>
+            <p class="welcome__box-text">Благополучно перевезли за 2018</p>
+          </div>
+
+          <div class="welcome__box">
+            <picture class="welcome__box-picture">
+              <source media="(min-width: 768px)" srcset="img/route.png">
+              <img class="welcome__box-img" src="img/route-mobile.png" alt="route">
+            </picture>
+            <p class="welcome__box-title">В 17 городах России и СНГ</p>
+            <p class="welcome__box-text">Пользуются нашими услугами</p>
+          </div>
+
+          <div class="welcome__box">
+            <picture class="welcome__box-picture">
+              <source media="(min-width: 768px)" srcset="img/bus.png">
+              <img class="welcome__box-img" src="img/bus-mobile.png" alt="bus">
+            </picture>
+            <p class="welcome__box-title">322 раза для туристов</p>
+            <p class="welcome__box-text">Заказывали наши клиенты</p>
+          </div>
+
+          <div class="welcome__box">
+            <picture class="welcome__box-picture">
+              <source media="(min-width: 768px)" srcset="img/traffic.png">
+              <img class="welcome__box-img" src="img/traffic-mobile.png" alt="traffic" width="42" height="48">
+            </picture>
+            <p class="welcome__box-title">250 раз микроавтобусы</p>
+            <p class="welcome__box-text">Заказывали наши клиенты</p>
+          </div>
+        </div>
+      </section>
+      <!--Карта с местоположением-->
+      <section class="agency container">
+        <h2 class="title title__agency">Наши представительства на карте России</h2>
+      </section>
+
+    </main>
+
+    <footer class="page-footer container">
+      <!--Логотип-->
+      <div class="page-footer__wrap">
+        <div class="logo logo--footer">
+          <a class="logo__link" href="#">
+            <picture class="logo__link-picture">
+              <source media="(min-width: 768px)" srcset="img/svg/logo-footer.svg">
+              <img class="logo__img logo__img--footer" src="img/svg/logo-footer.svg" alt="Logo">
+            </picture>
+          </a>
+        </div>
+
+        <p class="page-footer__text-min">© 2019 Федеральная автобусная компания – Avtobus Group</p>
+      </div>
+      <!--Направления-->
+      <div class="page-footer__route">
+        <h2 class="title title__page-footer">Направления</h2>
+
+        <div class="page-footer__route-block">
+          <p class="page-footer__route-text">Автобус для детей</p>
+          <p class="page-footer__route-text">Автобус на свадьбу</p>
+          <p class="page-footer__route-text">Автобус для экскурсии</p>
+          <p class="page-footer__route-text">Автобус для туров</p>
+          <p class="page-footer__route-text">Доставка сотрудников</p>
+          <p class="page-footer__route-text">Перевозка артистов</p>
+          <p class="page-footer__route-text">Городские перевозки</p>
+          <p class="page-footer__route-text">Перевозки спортсменов</p>
+          <p class="page-footer__route-text">Трансфер в аэропорт</p>
+        </div>
+      </div>
+      <!--Информация-->
+      <div class="page-footer__info">
+        <h2 class="title title__page-footer">Информация</h2>
+
+        <p class="page-footer__info-text">Как заказать?</p>
+        <p class="page-footer__info-text">О нас</p>
+        <p class="page-footer__info-text">Отзывы</p>
+        <p class="page-footer__info-text page-footer__info-text--tab">Политика конфиденциальности</p>
+      </div>
+      <!--Контакты-->
+      <div class="page-footer__wrap">
+        <div class="page-footer__contacts">
+          <h2 class="title title__page-footer">Контакты</h2>
+
+          <div class="page-footer__contacts-wrap">
+            <div class="page-footer__contacts-svg">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.6318 23.1203C18.7964 22.9253 19.0876 22.9006 19.2826 23.0649C20.3755 23.9865 21.3535 24.5467 22.4777 25.1342L18.6318 23.1203ZM18.6318 23.1203C18.4675 23.3153 18.4922 23.6065 18.6872 23.7711M18.6318 23.1203L18.6872 23.7711M18.6872 23.7711C19.9494 24.8351 21.0479 25.4357 22.3529 26.1103M18.6872 23.7711L22.3529 26.1103M22.3529 26.1103C22.5314 26.2026 22.7493 26.1688 22.8915 26.0266L22.3529 26.1103ZM19.3632 22.9693L19.3632 22.9693C20.4196 23.8602 21.3676 24.4105 22.4543 24.9809L25.2125 22.2228C25.4762 21.9591 25.8275 21.8138 26.2004 21.8138C26.5733 21.8138 26.9247 21.9591 27.1884 22.2228L31.7157 26.7502L31.7157 26.7502L31.6273 26.8386C31.8677 27.0788 31.9999 27.3983 31.9999 27.7381C31.9999 28.0779 31.8677 28.3972 31.6273 28.6376L30.4104 29.8545C28.9994 31.2655 27.0805 31.9988 24.8765 31.9988L19.3632 22.9693ZM19.3632 22.9693C19.1154 22.7605 18.7453 22.792 18.5363 23.0397L18.5362 23.0397M19.3632 22.9693L18.5362 23.0397M13.2491 8.28424L17.7769 12.8118L17.7769 12.8119L17.6885 12.9003C17.9289 13.1404 18.0611 13.46 18.0611 13.7998C18.0611 14.1396 17.9289 14.4591 17.6885 14.6993L13.2491 8.28424ZM13.2491 8.28424C13.2491 8.28423 13.2491 8.28421 13.2491 8.2842L13.2491 8.28424ZM18.5362 23.0397C18.3275 23.2875 18.3589 23.6576 18.6066 23.8666L18.6067 23.8666M18.5362 23.0397L18.6067 23.8666M18.6067 23.8666C19.8798 24.9399 20.9884 25.5457 22.2955 26.2213L22.2955 26.2214M18.6067 23.8666L22.2955 26.2214M22.2955 26.2214C22.5224 26.3386 22.7991 26.2957 22.9798 26.115L24.4104 24.6847L29.233 29.5071C27.6576 30.7983 25.4506 31.2479 22.9334 30.7531C20.039 30.1839 16.9653 28.3989 14.2829 25.7166C11.6006 23.0344 9.81526 19.9605 9.24603 17.0662C8.75119 14.5489 9.20086 12.342 10.4918 10.7668M22.2955 26.2214L10.4918 10.7668M10.4918 10.7668L15.3151 15.5897L13.8841 17.0205L13.8841 17.0205C13.7034 17.2012 13.6605 17.4782 13.778 17.7051C14.7008 19.4895 15.4499 20.8067 17.3215 22.6784L17.3215 22.6785C17.5508 22.9074 17.9223 22.9075 18.1514 22.6784C18.3807 22.4492 18.3808 22.0776 18.1514 21.8485L10.4918 10.7668ZM22.7071 31.9046C23.453 32.0513 24.1782 32.124 24.8765 32.1238L13.1607 8.37259C12.9205 8.1322 12.6009 7.99976 12.2611 7.99976C11.9214 7.99976 11.6018 8.1322 11.3616 8.37235L10.1444 9.58951C8.29209 11.4418 7.60751 14.169 8.21695 17.2684C8.8271 20.3711 10.7179 23.6348 13.5414 26.4582C16.3646 29.2813 19.6284 31.172 22.7312 31.7819L22.7071 31.9046C22.7071 31.9046 22.7071 31.9046 22.7071 31.9046ZM15.0185 17.5463L17.7769 14.7877L18.1514 21.8484C16.5247 20.2218 15.8289 19.0901 15.0185 17.5463ZM12.4189 9.11374L12.4191 9.1139L16.9472 13.6418C16.9894 13.6841 17.0126 13.7398 17.0126 13.7998C17.0126 13.8598 16.9894 13.9155 16.9472 13.9577L16.1451 14.7598L11.3011 9.91598L12.1032 9.1139C12.1454 9.07168 12.2011 9.04851 12.2611 9.04851C12.3214 9.04851 12.3769 9.07158 12.4189 9.11374ZM30.886 27.896L30.0837 28.6981L25.2404 23.8548L26.0425 23.0527L26.0426 23.0525C26.0846 23.0104 26.1404 22.9873 26.2004 22.9873C26.2603 22.9873 26.316 23.0103 26.3584 23.0527L26.4468 22.9643L26.3584 23.0527L30.8859 27.5798C30.973 27.6671 30.9729 27.8091 30.886 27.896C30.886 27.896 30.886 27.896 30.886 27.896Z" fill="#102EDB" stroke="#102EDB" stroke-width="0.25"></path>
+                <path d="M33.7866 39.9983H30.8361C30.2095 39.9983 29.7015 39.4903 29.7015 38.8638C29.7015 38.2372 30.2095 37.7292 30.8361 37.7292H33.7866C35.9616 37.7292 37.7312 35.9597 37.7312 33.7848V6.21349C37.7312 4.03866 35.9616 2.26912 33.7866 2.26912H16.7479C16.1212 2.26912 15.6133 1.7611 15.6133 1.13456C15.6133 0.508026 16.1212 0 16.7479 0H33.7867C37.2129 0 40.0004 2.78731 40.0004 6.21349V33.785C40.0004 37.211 37.213 39.9983 33.7866 39.9983Z" fill="#102EDB"></path>
+                <path d="M22.6322 40.0003H6.21372C2.78741 40.0003 0 37.213 0 33.7868V6.21544C0 2.78926 2.78741 0.00195312 6.21372 0.00195312H8.76715C9.39379 0.00195312 9.90176 0.509979 9.90176 1.13652C9.90176 1.76305 9.39379 2.27108 8.76715 2.27108H6.21372C4.03881 2.27108 2.26921 4.04053 2.26921 6.21544V33.7869C2.26921 35.9618 4.03873 37.7313 6.21372 37.7313H22.6322C23.2588 37.7313 23.7669 38.2393 23.7669 38.8659C23.7669 39.4924 23.2588 40.0003 22.6322 40.0003Z" fill="#102EDB"></path>
+              </svg>
+            </div>
+            <div class="page-footer__contacts-block">
+              <p class="page-footer__contacts-text">+7 (343) 300-96-83</p>
+              <p class="page-footer__contacts-text">+7 (499) 490-65-12</p>
+            </div>
+          </div>
+
+          <div class="page-footer__contacts-wrap">
+            <div class="page-footer__contacts-svg page-footer__contacts-svg--email">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M33.7866 39.9999H30.8361C30.2095 39.9999 29.7015 39.4918 29.7015 38.8653C29.7015 38.2387 30.2095 37.7307 30.8361 37.7307H33.7866C35.9616 37.7307 37.7312 35.9611 37.7312 33.7861V6.21373C37.7312 4.03881 35.9616 2.26921 33.7866 2.26921H16.7479C16.1212 2.26921 15.6133 1.76117 15.6133 1.13461C15.6133 0.508045 16.1212 0 16.7479 0H33.7867C37.2129 0 40.0004 2.78741 40.0004 6.21373V33.7863C40.0004 37.2125 37.213 39.9999 33.7866 39.9999Z" fill="#102EDB"></path>
+                <path d="M22.6322 40.0008H6.21372C2.78741 40.0008 0 37.2134 0 33.7871V6.21471C0 2.78839 2.78741 0.000976562 6.21372 0.000976562H8.76715C9.39379 0.000976562 9.90176 0.509022 9.90176 1.13558C9.90176 1.76214 9.39379 2.27019 8.76715 2.27019H6.21372C4.03881 2.27019 2.26921 4.03971 2.26921 6.21471V33.7873C2.26921 35.9622 4.03873 37.7318 6.21372 37.7318H22.6322C23.2588 37.7318 23.7669 38.2398 23.7669 38.8664C23.7669 39.493 23.2588 40.0008 22.6322 40.0008Z" fill="#102EDB"></path>
+                <rect x="8.5" y="12.5" width="22.9999" height="17" rx="1.5" fill="#CEE8FA" stroke="#102EDB"></rect>
+                <path d="M30.3123 15.3907C30.5279 15.2182 30.5629 14.9035 30.3904 14.6879C30.2179 14.4723 29.9032 14.4373 29.6876 14.6098L30.3123 15.3907ZM20 23.0002L19.6876 23.3907C19.8702 23.5367 20.1297 23.5367 20.3123 23.3907L20 23.0002ZM10.3123 14.6098C10.0967 14.4373 9.78207 14.4723 9.60957 14.6879C9.43706 14.9035 9.47202 15.2182 9.68765 15.3907L10.3123 14.6098ZM29.6876 14.6098L19.6876 22.6098L20.3123 23.3907L30.3123 15.3907L29.6876 14.6098ZM20.3123 22.6098L10.3123 14.6098L9.68765 15.3907L19.6876 23.3907L20.3123 22.6098Z" fill="#102EDB"></path>
+              </svg>
+            </div>
+            <p class="page-footer__contacts-text page-footer__contacts-text--email">avtobusgroup@gmail.com</p>
+          </div>
+
+          <div class="page-footer__contacts-wrap">
+            <div class="page-footer__contacts-svg">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="path-1-inside-1" fill="white">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9999 34.5186C19.9999 34.5186 29.9998 21.7735 29.9998 16.4519C29.9998 11.1304 25.5227 6.81641 19.9999 6.81641C14.4771 6.81641 10 11.1304 10 16.4519C10 21.7735 19.9999 34.5186 19.9999 34.5186ZM20 19.9993C22.2091 19.9993 23.9999 18.2085 23.9999 15.9994C23.9999 13.7903 22.2091 11.9995 20 11.9995C17.7908 11.9995 16 13.7903 16 15.9994C16 18.2085 17.7908 19.9993 20 19.9993Z"></path>
+                </mask>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9999 34.5186C19.9999 34.5186 29.9998 21.7735 29.9998 16.4519C29.9998 11.1304 25.5227 6.81641 19.9999 6.81641C14.4771 6.81641 10 11.1304 10 16.4519C10 21.7735 19.9999 34.5186 19.9999 34.5186ZM20 19.9993C22.2091 19.9993 23.9999 18.2085 23.9999 15.9994C23.9999 13.7903 22.2091 11.9995 20 11.9995C17.7908 11.9995 16 13.7903 16 15.9994C16 18.2085 17.7908 19.9993 20 19.9993Z" fill="#CEE8FA"></path>
+                <path d="M19.9999 34.5186L19.2131 35.1359L19.9999 36.1386L20.7866 35.1359L19.9999 34.5186ZM28.9998 16.4519C28.9998 17.5383 28.4676 19.1556 27.5366 21.0854C26.6249 22.9752 25.3999 25.0278 24.161 26.9364C22.9245 28.8414 21.6862 30.5846 20.756 31.8525C20.2913 32.486 19.9044 32.9998 19.6341 33.3545C19.499 33.5318 19.3931 33.6694 19.3213 33.7621C19.2854 33.8085 19.258 33.8437 19.2398 33.8671C19.2307 33.8788 19.2239 33.8876 19.2194 33.8933C19.2172 33.8962 19.2155 33.8983 19.2145 33.8996C19.2139 33.9003 19.2136 33.9007 19.2133 33.901C19.2132 33.9012 19.2132 33.9012 19.2131 33.9013C19.2131 33.9013 19.2131 33.9013 19.9999 34.5186C20.7866 35.1359 20.7867 35.1357 20.7869 35.1356C20.787 35.1354 20.7871 35.1352 20.7873 35.135C20.7877 35.1345 20.7882 35.1338 20.7889 35.1329C20.7903 35.1311 20.7923 35.1286 20.7949 35.1253C20.8 35.1188 20.8075 35.1091 20.8173 35.0966C20.8369 35.0714 20.8657 35.0344 20.903 34.9861C20.9777 34.8896 21.0867 34.7481 21.225 34.5666C21.5016 34.2035 21.8959 33.68 22.3687 33.0355C23.3135 31.7474 24.5752 29.9717 25.8386 28.0253C27.0997 26.0824 28.3747 23.951 29.3379 21.9544C30.2819 19.9978 30.9998 18.0263 30.9998 16.4519H28.9998ZM19.9999 7.81641C25.0057 7.81641 28.9998 11.7173 28.9998 16.4519H30.9998C30.9998 10.5434 26.0396 5.81641 19.9999 5.81641V7.81641ZM11 16.4519C11 11.7173 14.9941 7.81641 19.9999 7.81641V5.81641C13.9601 5.81641 9 10.5434 9 16.4519H11ZM19.9999 34.5186C20.7866 33.9013 20.7866 33.9013 20.7866 33.9013C20.7866 33.9012 20.7865 33.9012 20.7864 33.901C20.7862 33.9007 20.7858 33.9003 20.7853 33.8996C20.7842 33.8983 20.7826 33.8962 20.7804 33.8933C20.7759 33.8876 20.7691 33.8788 20.7599 33.8671C20.7417 33.8437 20.7143 33.8085 20.6784 33.7621C20.6066 33.6694 20.5007 33.5318 20.3656 33.3545C20.0954 32.9998 19.7084 32.486 19.2437 31.8525C18.3136 30.5846 17.0753 28.8414 15.8387 26.9364C14.5999 25.0278 13.3749 22.9752 12.4631 21.0854C11.5321 19.1556 11 17.5383 11 16.4519H9C9 18.0263 9.71784 19.9978 10.6618 21.9544C11.6251 23.951 12.9 26.0824 14.1611 28.0253C15.4246 29.9717 16.6862 31.7474 17.6311 33.0355C18.1039 33.68 18.4981 34.2035 18.7748 34.5666C18.9131 34.7481 19.022 34.8896 19.0967 34.9861C19.1341 35.0344 19.1628 35.0714 19.1824 35.0966C19.1922 35.1091 19.1998 35.1188 19.2049 35.1253C19.2075 35.1286 19.2094 35.1311 19.2108 35.1329C19.2115 35.1338 19.212 35.1345 19.2124 35.135C19.2126 35.1352 19.2128 35.1354 19.2129 35.1356C19.213 35.1357 19.2131 35.1359 19.9999 34.5186ZM22.9999 15.9994C22.9999 17.6562 21.6568 18.9993 20 18.9993V20.9993C22.7613 20.9993 24.9999 18.7608 24.9999 15.9994H22.9999ZM20 12.9995C21.6568 12.9995 22.9999 14.3426 22.9999 15.9994H24.9999C24.9999 13.238 22.7613 10.9995 20 10.9995V12.9995ZM17 15.9994C17 14.3426 18.3431 12.9995 20 12.9995V10.9995C17.2386 10.9995 15 13.238 15 15.9994H17ZM20 18.9993C18.3431 18.9993 17 17.6562 17 15.9994H15C15 18.7608 17.2386 20.9993 20 20.9993V18.9993Z" fill="#102EDB" mask="url(#path-1-inside-1)"></path>
+                <path d="M33.7863 39.9989H30.8358C30.2093 39.9989 29.7012 39.4908 29.7012 38.8643C29.7012 38.2378 30.2093 37.7297 30.8358 37.7297H33.7863C35.9612 37.7297 37.7308 35.9602 37.7308 33.7853V6.21358C37.7308 4.03872 35.9613 2.26916 33.7863 2.26916H16.7478C16.1211 2.26916 15.6132 1.76112 15.6132 1.13458C15.6132 0.508033 16.1211 0 16.7478 0H33.7864C37.2125 0 40.0001 2.78734 40.0001 6.21358V33.7855C40 37.2115 37.2126 39.9989 33.7863 39.9989Z" fill="#102EDB"></path>
+                <path d="M22.632 39.9999H6.21366C2.78738 39.9999 0 37.2125 0 33.7863V6.21455C0 2.78832 2.78738 0.000976562 6.21366 0.000976562H8.76706C9.39369 0.000976562 9.90166 0.509009 9.90166 1.13555C9.90166 1.7621 9.39369 2.27013 8.76706 2.27013H6.21366C4.03877 2.27013 2.26919 4.03961 2.26919 6.21455V33.7864C2.26919 35.9613 4.03869 37.7309 6.21366 37.7309H22.632C23.2586 37.7309 23.7666 38.2389 23.7666 38.8654C23.7666 39.492 23.2586 39.9999 22.632 39.9999Z" fill="#102EDB"></path>
+              </svg>
+            </div>
+            <p class="page-footer__contacts-text page-footer__contacts-text--adress">620137, г. Екатеринбург, ул.Белинского, д. 85, оф. 24</p>
+          </div>
+        </div>
+
+        <div class="page-footer__social social">
+        <a class="social__link social__link--vk" href="#">
+          <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M48.9876 57.999H44.7096C43.8012 57.999 43.0646 57.2624 43.0646 56.354C43.0646 55.4455 43.8012 54.7089 44.7096 54.7089H48.9876C52.1411 54.7089 54.7068 52.1432 54.7068 48.9897V9.01226C54.7068 5.85884 52.1412 3.29308 48.9876 3.29308H24.283C23.3744 3.29308 22.6379 2.55646 22.6379 1.648C22.6379 0.739548 23.3744 0.00292969 24.283 0.00292969H48.9877C53.9554 0.00292969 57.9971 4.04442 57.9971 9.01226V48.9899C57.997 53.9576 53.9555 57.999 48.9876 57.999Z" fill="#102EDB"></path>
+            <path d="M32.8147 58H9.00933C4.04149 58 0 53.9585 0 48.9907V9.01324C0 4.0454 4.04149 0.00390625 9.00933 0.00390625H12.7116C13.6201 0.00390625 14.3566 0.740525 14.3566 1.64898C14.3566 2.55743 13.6201 3.29405 12.7116 3.29405H9.00933C5.8559 3.29405 3.29014 5.8597 3.29014 9.01324V48.9909C3.29014 52.1443 5.85579 54.7101 9.00933 54.7101H32.8147C33.7231 54.7101 34.4598 55.4467 34.4598 56.3552C34.4598 57.2636 33.7231 58 32.8147 58Z" fill="#102EDB"></path>
+            <path d="M46.396 40.3918C45.0602 40.3918 43.4263 40.3543 42.7287 40.3385C42.5186 40.3337 42.3816 40.3306 42.3442 40.3304C41.2265 40.3255 40.2639 39.9423 39.4834 39.1913C38.8502 38.582 38.2373 37.9157 37.6445 37.2713C37.3089 36.9067 36.9622 36.5297 36.6123 36.1634C36.2595 35.7944 35.9274 35.4929 35.5964 35.2414C35.167 34.914 34.7094 34.7406 34.2743 34.7406C33.5548 34.7406 32.9621 35.193 32.6486 35.982C32.2883 36.8916 32.0118 39.1131 32.0016 39.2502C31.9572 39.874 31.6005 40.1946 30.9111 40.2325C30.459 40.2569 30.0153 40.2696 29.5926 40.2696C26.8687 40.2696 24.5691 39.7471 22.5625 38.6721C20.5333 37.5853 18.7138 35.9934 17.0004 33.8058C14.8356 31.0427 12.8862 27.8395 10.6795 23.4203C10.5736 23.2082 8.87993 19.5973 8.71739 19.19C8.67117 19.0002 8.64602 18.6907 8.80653 18.5866C8.92875 18.575 9.30086 18.5553 10.4115 18.5553C12.2635 18.5553 14.989 18.6114 15.1398 18.6167C15.9028 18.658 16.3186 18.9583 16.6145 19.6878C17.9072 22.8796 19.4463 25.5716 21.32 27.9169C21.604 28.2741 21.9749 28.6144 22.3925 28.9005C22.6855 29.1015 22.9998 29.2078 23.3012 29.2078H23.3014C23.8752 29.2078 24.348 28.8411 24.5661 28.2263C24.8166 27.5269 25.0181 26.2397 25.0305 25.557C25.0632 23.8822 25.0262 22.7899 24.9359 21.1136C24.8515 19.5635 24.1143 18.6375 22.685 18.2902C23.1198 17.82 23.7122 17.6996 24.617 17.6513C25.1236 17.624 25.6776 17.6106 26.3113 17.6106C26.9002 17.6106 27.5023 17.6218 28.0847 17.6328C28.4938 17.6405 28.9027 17.6481 29.3115 17.6522C29.9862 17.6583 30.5708 17.7173 31.1001 17.833C31.4219 17.9031 31.8644 18.0858 31.9952 18.8641C32.062 19.2591 32.0916 19.6422 32.0831 20.0036C32.0664 20.7451 32.0413 21.4996 32.0173 22.2292C31.9826 23.2782 31.9466 24.3631 31.9343 25.4334C31.9244 26.264 31.9951 27.0296 32.1442 27.709C32.3413 28.6013 32.8764 29.1336 33.5761 29.1336C33.87 29.1336 34.3208 29.0295 34.7991 28.5338C35.5567 27.7471 36.2881 26.8317 37.1707 25.5663C38.3222 23.9144 39.3169 21.9877 40.301 19.5026C40.6313 18.6711 40.7159 18.6126 41.5954 18.6107C42.7495 18.6077 43.9034 18.606 45.0575 18.606C46.0701 18.606 47.083 18.6075 48.0958 18.6107C48.482 18.6124 48.7937 18.6523 49.0487 18.7333C49.2232 18.7889 49.3741 18.8697 49.2905 19.2385C48.9822 20.6063 48.1916 21.801 47.475 22.8133C46.6042 24.0423 45.6882 25.2755 44.8024 26.4681C44.3358 27.096 43.8695 27.7241 43.4069 28.3547C43.2373 28.5861 43.0744 28.8442 42.8947 29.1664C42.238 30.3548 42.3422 31.1882 43.2649 32.1411C43.7556 32.6471 44.2655 33.1448 44.7585 33.6258C45.4546 34.3052 46.1746 35.0076 46.835 35.7301C47.67 36.6452 48.4052 37.6012 49.0194 38.5711C49.3039 39.0202 49.3853 39.4552 49.2425 39.764C49.1047 40.0622 48.7514 40.2659 48.2473 40.3375C48.1022 40.3574 47.6679 40.3918 46.396 40.3918Z" fill="#CEE8FA"></path>
+            <path d="M46.395 42.0337C45.0478 42.0337 43.4035 41.9962 42.7015 41.9802C42.5014 41.9756 42.3753 41.9726 42.3338 41.9723C40.8027 41.9654 39.4217 41.4126 38.3418 40.3733C37.6698 39.7264 37.0409 39.0429 36.4328 38.3818L36.4118 38.3588C36.0882 38.0074 35.7538 37.644 35.4218 37.2965C35.1301 36.9913 34.8612 36.7462 34.5999 36.5476C34.4486 36.4323 34.3377 36.3934 34.2911 36.3846C34.2682 36.4094 34.2231 36.4686 34.1764 36.5864C33.9532 37.15 33.6926 38.8722 33.6401 39.3833C33.5305 40.8339 32.5199 41.7886 31 41.8718C30.5169 41.898 30.0434 41.9114 29.5915 41.9114C26.5895 41.9114 24.0358 41.3251 21.7844 40.1189C19.5499 38.9221 17.561 37.1877 15.7041 34.8169C13.4689 31.9639 11.4649 28.6747 9.20652 24.1521C9.11058 23.96 7.38032 20.278 7.18821 19.7961C7.15955 19.7243 7.13611 19.6508 7.11776 19.5757C6.87671 18.5857 7.18006 17.6766 7.90965 17.2032C8.13223 17.0589 8.38619 16.9704 8.65023 16.9456C8.75127 16.9359 9.05858 16.907 10.4102 16.907C12.3069 16.907 15.0346 16.9638 15.1962 16.9693C15.2065 16.9698 15.2169 16.9701 15.2272 16.9708C16.625 17.0464 17.6042 17.7513 18.1374 19.0661C19.3699 22.1096 20.8309 24.6675 22.6036 26.8869C22.7378 27.0559 22.9101 27.2251 23.1029 27.3789C23.252 26.8097 23.3761 25.9579 23.3841 25.524C23.416 23.8978 23.3797 22.8337 23.2916 21.1988C23.2413 20.2761 22.9302 20.04 22.2951 19.8858C21.7285 19.748 21.2771 19.3206 21.1086 18.7625C20.9402 18.2043 21.0799 17.5987 21.4756 17.1705C22.3321 16.2442 23.4486 16.0635 24.5278 16.0058C25.0641 15.9768 25.6473 15.9626 26.3099 15.9626C26.9176 15.9626 27.526 15.974 28.1141 15.9852C28.5186 15.9928 28.923 16.0004 29.3272 16.0044C30.1138 16.0115 30.8088 16.0831 31.4497 16.2229C32.6161 16.4768 33.4062 17.3389 33.6163 18.5882C33.7003 19.085 33.7374 19.5736 33.7265 20.0394C33.7099 20.7752 33.6854 21.5215 33.6614 22.2433L33.66 22.2807C33.6254 23.3303 33.5899 24.4015 33.5778 25.4494C33.5699 26.1185 33.6215 26.7286 33.7312 27.2653C34.3851 26.5706 35.0354 25.7472 35.8199 24.6222C36.8965 23.0779 37.8338 21.2576 38.77 18.8939C39.3495 17.4349 40.0347 16.9659 41.5905 16.9626C43.7597 16.9572 45.9299 16.9557 48.0995 16.9626C48.657 16.9649 49.1293 17.0303 49.5452 17.1623C50.6058 17.5004 51.147 18.4794 50.8934 19.5992C50.519 21.261 49.6247 22.6187 48.8159 23.7611C47.9368 25.002 47.0178 26.2391 46.1293 27.4357C45.6567 28.0717 45.1923 28.6971 44.7315 29.3251C44.6034 29.5 44.4754 29.7034 44.3297 29.9648C44.0096 30.5441 44.0508 30.5867 44.4449 30.9937C44.9203 31.4837 45.4212 31.9727 45.9058 32.4455C46.6226 33.1452 47.3574 33.8625 48.0476 34.6172C48.9484 35.6043 49.742 36.6369 50.4077 37.688C50.9969 38.6184 51.1159 39.6255 50.7344 40.451C50.5148 40.9268 49.9292 41.7569 48.4772 41.9632C48.2592 41.9933 47.8085 42.0337 46.395 42.0337ZM34.2733 33.0921C35.072 33.0921 35.8741 33.3819 36.593 33.9298C36.9921 34.2331 37.3876 34.5913 37.8006 35.0234C38.1537 35.393 38.4986 35.7676 38.8322 36.1302L38.8537 36.1538C39.4292 36.7794 40.0234 37.4254 40.6232 38.0027C41.095 38.4567 41.6601 38.679 42.3505 38.6822C42.3906 38.6823 42.5385 38.6854 42.7652 38.6908C43.4671 38.7067 45.0849 38.7435 46.3947 38.7435C46.6985 38.7435 46.9486 38.7414 47.1533 38.7383C46.6975 38.092 46.1832 37.4545 45.6182 36.8357C44.9924 36.1512 44.2918 35.4671 43.6139 34.8056C43.1074 34.3114 42.5901 33.8065 42.0823 33.2829C40.6486 31.8026 40.4431 30.1949 41.4534 28.3671C41.6698 27.9789 41.8676 27.6665 42.0783 27.3788C42.5435 26.7448 43.0119 26.1142 43.4803 25.4835C44.366 24.2912 45.2736 23.069 46.1312 21.8588C46.4821 21.3631 46.8528 20.8203 47.1529 20.2498C45.3599 20.2459 43.5652 20.2476 41.7708 20.2517C40.7575 22.7874 39.7221 24.7777 38.5188 26.5035C37.5842 27.8437 36.8021 28.8207 35.9827 29.6715C35.1028 30.584 34.1878 30.7753 33.5747 30.7753C32.0933 30.7753 30.9008 29.7096 30.5364 28.0606C30.36 27.2568 30.2767 26.366 30.2879 25.4107C30.3003 24.3277 30.3363 23.2385 30.3712 22.1852L30.3728 22.1346C30.3965 21.4211 30.4208 20.6837 30.4372 19.9634C30.4415 19.7767 30.4313 19.5797 30.4063 19.3746C30.0737 19.3243 29.7073 19.2979 29.2951 19.2942C28.8798 19.2899 28.4659 19.2824 28.0521 19.2745C27.4422 19.2632 26.8063 19.2509 26.1994 19.2528C26.4137 19.7772 26.5413 20.369 26.5769 21.0211C26.6693 22.7386 26.7074 23.8595 26.6735 25.5859C26.6586 26.4124 26.4298 27.8939 26.1131 28.7779C25.6603 30.0538 24.5816 30.8495 23.2997 30.8495C22.6646 30.8495 22.0284 30.6436 21.4601 30.2538C20.9098 29.8767 20.4152 29.4214 20.0304 28.9372C18.0587 26.4689 16.4413 23.6432 15.088 20.302C15.0812 20.2854 15.0749 20.2707 15.0691 20.2574C15.0677 20.2573 15.0663 20.2571 15.065 20.2571C14.8145 20.2502 12.6893 20.2076 10.985 20.1989C11.4863 21.2777 12.0678 22.5164 12.1507 22.6844C14.3053 26.9991 16.2001 30.1157 18.2938 32.7881C19.8635 34.7925 21.5134 36.2416 23.3376 37.2188C25.0994 38.1626 27.1449 38.6213 29.5909 38.6213C29.8597 38.6213 30.1383 38.6159 30.4235 38.6049C30.5312 37.7956 30.7705 36.2484 31.1175 35.373C31.6859 33.9441 32.8653 33.0921 34.2733 33.0921Z" fill="#102EDB"></path>
+          </svg>
+        </a>
+        <a class="social__link social__link--fb" href="#">
+          <svg width="59" height="58" viewBox="0 0 59 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M49.1832 57.9961H44.9052C43.9967 57.9961 43.2601 57.2596 43.2601 56.351C43.2601 55.4424 43.9967 54.7059 44.9052 54.7059H49.1832C52.3366 54.7059 54.9024 52.1403 54.9024 48.9868V9.00933C54.9024 5.85591 52.3367 3.29015 49.1832 3.29015H24.4786C23.57 3.29015 22.8335 2.55364 22.8335 1.64507C22.8335 0.736505 23.57 0 24.4786 0H49.1833C54.1509 0 58.1926 4.04149 58.1926 9.00933V48.9868C58.1925 53.9546 54.151 57.9961 49.1832 57.9961Z" fill="#102EDB"></path>
+            <path d="M33.009 57.9961H9.20366C4.23582 57.9961 0.194336 53.9546 0.194336 48.9868V9.00933C0.194336 4.04149 4.23582 0 9.20366 0H12.9059C13.8145 0 14.551 0.736505 14.551 1.64507C14.551 2.55364 13.8145 3.29015 12.9059 3.29015H9.20366C6.05024 3.29015 3.48448 5.85579 3.48448 9.00933V48.9868C3.48448 52.1402 6.05013 54.7059 9.20366 54.7059H33.009C33.9175 54.7059 34.6541 55.4424 34.6541 56.351C34.6542 57.2596 33.9175 57.9961 33.009 57.9961Z" fill="#102EDB"></path>
+            <path d="M30.6363 12.1024L30.6461 12.1026L30.656 12.1024C40.5625 11.9071 48.7606 19.7599 48.9929 29.6642C48.7606 39.5684 40.5625 47.4213 30.656 47.2259L30.656 47.2258L30.6451 47.2258C28.3188 47.2305 26.0116 46.8067 23.8388 45.9757L23.6063 45.8868L23.3953 46.0186L19.0181 48.753L19.018 48.753C18.9727 48.7814 18.9202 48.7964 18.8668 48.7964C18.7092 48.7964 18.5815 48.6686 18.5815 48.5111V43.1083V42.8762L18.4042 42.7264C14.5577 39.4758 12.3271 34.7043 12.2992 29.6686C12.5292 19.7623 20.7283 11.9071 30.6363 12.1024Z" fill="#CEE8FA" stroke="#102EDB"></path>
+            <path d="M34.9923 30.5651L34.6337 30.3015L29.9447 26.8553C29.9439 26.855 29.9423 26.8542 29.9395 26.8534C29.933 26.8515 29.9235 26.85 29.9125 26.8504C29.9014 26.8508 29.893 26.8528 29.8884 26.8546C29.8881 26.8547 29.8878 26.8548 29.8875 26.8549L21.8059 33.7815L28.7854 30.5201L29.1884 30.3318L29.5469 30.5952L34.2405 34.0427M34.9923 30.5651L34.2968 34.0435C34.2921 34.0452 34.2837 34.0473 34.2727 34.0477C34.2617 34.048 34.2522 34.0465 34.2457 34.0446C34.2429 34.0438 34.2412 34.0431 34.2405 34.0427M34.9923 30.5651L35.3954 30.3767L42.3876 27.1094L34.2977 34.0432L34.9923 30.5651ZM34.2405 34.0427L34.2417 34.0436M34.2405 34.0427C34.2395 34.0423 34.24 34.0424 34.2417 34.0436M34.2417 34.0436L34.2417 34.0437L34.2417 34.0436ZM29.8912 26.8517C29.8912 26.8518 29.8911 26.8518 29.8911 26.8518L29.8911 26.8518L29.8912 26.8517Z" fill="#CEE8FA" stroke="#102EDB" stroke-width="1.5"></path>
+          </svg>
+        </a>
+        <a class="social__link social__link--tl" href="#">
+          <svg width="59" height="58" viewBox="0 0 59 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M49.3761 57.9962H45.0982C44.1896 57.9962 43.4531 57.2597 43.4531 56.3511C43.4531 55.4425 44.1896 54.706 45.0982 54.706H49.3761C52.5295 54.706 55.0953 52.1404 55.0953 48.9868V9.00935C55.0953 5.85592 52.5297 3.29015 49.3761 3.29015H24.6714C23.7629 3.29015 23.0264 2.55364 23.0264 1.64508C23.0264 0.736506 23.7629 0 24.6714 0H49.3761C54.344 0 58.3855 4.0415 58.3855 9.00935V48.9868C58.3855 53.9547 54.344 57.9962 49.3761 57.9962Z" fill="#102EDB"></path>
+            <path d="M33.2046 57.9962H9.39936C4.43151 57.9962 0.390015 53.9547 0.390015 48.9868V9.00935C0.390015 4.0415 4.43151 0 9.39936 0H13.1016C14.0102 0 14.7467 0.736506 14.7467 1.64508C14.7467 2.55364 14.0102 3.29015 13.1016 3.29015H9.39936C6.24593 3.29015 3.68017 5.8558 3.68017 9.00935V48.9868C3.68017 52.1403 6.24582 54.706 9.39936 54.706H33.2046C34.1132 54.706 34.8497 55.4425 34.8497 56.3511C34.8497 57.2597 34.1132 57.9962 33.2046 57.9962Z" fill="#102EDB"></path>
+            <path d="M45.3709 13.6712L11.8317 26.7413C10.7451 27.1647 10.8112 28.7236 11.9296 29.0535L19.5906 31.3154L21.9718 40.2318C22.304 41.2861 23.6398 41.6054 24.4131 40.8159L29.1279 36.3165L39.1269 44.094C40.185 44.8706 41.6918 44.2933 41.9605 43.009L47.6867 15.6319C47.967 14.2907 46.6478 13.1736 45.3709 13.6712Z" fill="#CEE8FA"></path>
+            <path d="M40.1892 46.0929H40.1891C39.4547 46.0929 38.7507 45.8611 38.1537 45.4229C38.1413 45.4138 38.1292 45.4046 38.1172 45.3952L29.2378 38.4885L25.5654 41.9932C24.9781 42.5808 24.2008 42.9039 23.3729 42.9039C22.0064 42.9039 20.8128 42.0299 20.403 40.7288C20.3957 40.7056 20.3888 40.6824 20.3826 40.6589L18.2397 32.6345L11.4639 30.6338C10.2694 30.2813 9.46312 29.2493 9.41045 28.0049C9.35766 26.7602 10.0738 25.6636 11.2347 25.2112L44.774 12.1411C45.1706 11.9865 45.584 11.9082 46.0029 11.9082C47.0184 11.9082 47.9717 12.3647 48.6183 13.1606C49.2585 13.9484 49.5058 14.9729 49.297 15.9713L43.5705 43.3485C43.2381 44.9386 41.816 46.0929 40.1892 46.0929ZM40.1104 42.7775C40.137 42.795 40.1612 42.8026 40.1892 42.8026C40.2029 42.8026 40.3241 42.7992 40.3503 42.6748L46.0765 15.2977C46.0829 15.2669 46.0806 15.2545 46.0648 15.2352C46.0477 15.2141 46.0209 15.1981 46.0027 15.1981C45.9945 15.1981 45.9824 15.2011 45.9685 15.2065L13.5802 27.828L20.0564 29.7403C20.6062 29.9027 21.0319 30.3398 21.1799 30.8937L23.4648 39.4495L27.9921 35.129C28.5817 34.5662 29.4946 34.5201 30.1378 35.0206L40.1104 42.7775Z" fill="#102EDB"></path>
+            <path d="M25.2737 38.7442C25.3254 38.9113 27.2101 36.5552 27.2302 36.381L26.3848 32.2425C26.2735 31.6973 26.471 31.1351 26.8989 30.7795L42.3945 17.9032C42.7674 17.5733 42.3342 16.9914 41.9114 17.2534L23.6894 28.3674C23.2573 28.631 23.0344 29.1348 23.1299 29.6316L25.2737 38.7442Z" fill="#102EDB"></path>
+          </svg>
+        </a>
+        <a class="social__link social__link--ws" href="#">
+          <svg width="59" height="58" viewBox="0 0 59 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M29.5837 47.8093C27.3106 47.8093 25.0922 47.4085 22.9827 46.617L15.0124 47.7653C14.5036 47.8385 13.9892 47.6696 13.623 47.3086C13.2567 46.9474 13.0805 46.4359 13.1466 45.9257L13.9784 39.5031C11.8791 36.3935 10.7729 32.776 10.7729 28.9984C10.7729 18.6259 19.2114 10.1875 29.5839 10.1875C39.9564 10.1875 48.3948 18.6259 48.3948 28.9984C48.3948 39.3709 39.9559 47.8093 29.5837 47.8093ZM23.1755 43.282C23.3853 43.282 23.5941 43.3221 23.7899 43.4011C25.6322 44.143 27.5815 44.5191 29.5834 44.5191C38.1415 44.5191 45.1042 37.5564 45.1042 28.9983C45.1042 20.4403 38.1415 13.4775 29.5834 13.4775C21.0254 13.4775 14.0626 20.4403 14.0626 28.9983C14.0626 32.2996 15.0858 35.4519 17.0218 38.1145C17.2691 38.4545 17.3768 38.8764 17.3227 39.2932L16.6872 44.1999L22.9408 43.2989C23.0189 43.2875 23.0974 43.282 23.1755 43.282Z" fill="#102EDB"></path>
+            <path d="M49.5712 57.9962H45.2933C44.3847 57.9962 43.6482 57.2597 43.6482 56.3511C43.6482 55.4425 44.3847 54.706 45.2933 54.706H49.5712C52.7246 54.706 55.2904 52.1404 55.2904 48.9868V9.00935C55.2904 5.85592 52.7247 3.29015 49.5712 3.29015H24.8665C23.9579 3.29015 23.2214 2.55364 23.2214 1.64508C23.2214 0.736506 23.9579 0 24.8665 0H49.5712C54.539 0 58.5805 4.0415 58.5805 9.00935V48.9868C58.5805 53.9547 54.539 57.9962 49.5712 57.9962Z" fill="#102EDB"></path>
+            <path d="M33.3999 57.9962H9.59467C4.62682 57.9962 0.585327 53.9547 0.585327 48.9868V9.00935C0.585327 4.0415 4.62682 0 9.59467 0H13.2969C14.2055 0 14.942 0.736506 14.942 1.64508C14.942 2.55364 14.2055 3.29015 13.2969 3.29015H9.59467C6.44124 3.29015 3.87548 5.8558 3.87548 9.00935V48.9868C3.87548 52.1403 6.44113 54.706 9.59467 54.706H33.3999C34.3085 54.706 35.045 55.4425 35.045 56.3511C35.045 57.2597 34.3085 57.9962 33.3999 57.9962Z" fill="#102EDB"></path>
+            <path d="M33.2533 31.7246L32.1499 32.8278C32.0554 32.7762 31.9534 32.7252 31.8506 32.6674C30.9035 32.1421 29.7342 31.5531 28.3703 30.1894C27.0034 28.8222 26.4095 27.6522 25.8847 26.7051C25.828 26.6055 25.8051 26.5404 25.7536 26.4473L26.7886 25.4745L26.8959 25.3672C27.7158 24.5473 27.7158 23.2177 26.8959 22.3978L25.2788 20.7807C24.4543 19.9562 23.1157 19.9614 22.2978 20.7926L21.8667 21.2304C21.5861 21.5894 21.3481 22.0069 21.1736 22.4522C21.0124 22.8774 20.9095 23.2847 20.8647 23.69C20.4709 26.9459 21.258 29.2216 25.2948 33.2599C30.8765 38.84 34.6452 37.7527 34.8395 37.7309C35.2615 37.6812 35.6954 37.5473 36.1075 37.3879C36.5494 37.2152 36.9706 36.9736 37.3277 36.6929L37.7657 36.2622C38.5975 35.4443 38.6033 34.1051 37.7782 33.2803L36.2226 31.7247C35.4027 30.9047 34.0734 30.9047 33.2533 31.7246Z" fill="#CEE8FA"></path>
+            <path d="M33.8403 39.4739C33.8403 39.4739 33.8402 39.4739 33.8403 39.4739C31.7163 39.4739 28.3082 38.5974 24.1315 34.4222C19.9842 30.273 18.7468 27.5161 19.2305 23.4994C19.2905 22.9616 19.4229 22.4278 19.6353 21.8678C19.6375 21.8622 19.6396 21.8566 19.6418 21.851C19.8746 21.2563 20.1873 20.7061 20.5709 20.2157C20.6092 20.1666 20.6503 20.1197 20.6943 20.0752L21.1253 19.6373C21.8349 18.9164 22.7827 18.5195 23.7942 18.5195C24.7944 18.5195 25.7348 18.9091 26.442 19.6164L28.0591 21.2335C28.7663 21.9406 29.156 22.881 29.156 23.8813C29.156 24.8818 28.7664 25.8221 28.0591 26.5295L27.9521 26.6365C27.9401 26.6485 27.9279 26.6604 27.9154 26.6718L27.8081 26.7727C28.2036 27.4506 28.7062 28.1969 29.534 29.0248C30.3977 29.8885 31.1483 30.3813 31.8606 30.7895L32.0902 30.5599C32.7974 29.8527 33.7378 29.463 34.738 29.463C35.7382 29.463 36.6786 29.8526 37.3859 30.5599L38.9417 32.1157C39.6532 32.8271 40.0427 33.7733 40.0385 34.7794C40.0342 35.7855 39.6367 36.7284 38.9192 37.4338L38.4812 37.8644C38.4379 37.907 38.3921 37.9473 38.3442 37.9851C37.8578 38.3673 37.2915 38.6902 36.7064 38.9188C36.1103 39.1494 35.5828 39.292 35.0911 39.356C34.9124 39.3917 34.4775 39.4739 33.8403 39.4739ZM22.7085 23.0428C22.5966 23.3397 22.5284 23.6101 22.4998 23.8688C22.4991 23.8745 22.4984 23.8803 22.4978 23.886C22.181 26.5062 22.6775 28.3134 26.4582 32.0956C30.0161 35.6524 32.6106 36.1837 33.8404 36.1837C34.1749 36.1837 34.3787 36.143 34.4657 36.1258C34.5587 36.1073 34.6229 36.0983 34.6569 36.0948C34.8737 36.0693 35.1654 35.9874 35.5137 35.8525C35.7679 35.7531 36.0269 35.6099 36.247 35.4472L36.6122 35.0881C36.7239 34.9783 36.7478 34.8521 36.7482 34.7658C36.7485 34.6795 36.7257 34.5533 36.6149 34.4425L35.0594 32.8867C34.9495 32.7768 34.8237 32.7536 34.7379 32.7536C34.652 32.7536 34.5265 32.7768 34.4164 32.8867L33.313 33.9899C32.7974 34.5055 32.0039 34.6202 31.3635 34.2715L31.2654 34.2194C31.1933 34.1816 31.1195 34.1424 31.0449 34.1005L30.8256 33.9797C29.8976 33.4697 28.6268 32.7712 27.2068 31.3513C25.776 29.9201 25.074 28.6435 24.5615 27.7114L24.4483 27.506C24.3988 27.4181 24.3632 27.3457 24.3289 27.2736L24.3125 27.2395C23.9484 26.5811 24.0786 25.7621 24.6267 25.2471L25.7323 24.2026C25.8424 24.0925 25.8655 23.967 25.8655 23.8811C25.8655 23.7953 25.8423 23.6698 25.7323 23.5596L24.1152 21.9426C24.0051 21.8324 23.8796 21.8095 23.7937 21.8095C23.7068 21.8095 23.5802 21.833 23.4696 21.9452L23.1118 22.3085C22.9509 22.5276 22.8123 22.7795 22.7085 23.0428Z" fill="#102EDB"></path>
+          </svg>
+        </a>
+        </div>
+      </div>
+
+      <picture class="page-footer__picture">
+        <source media="(min-width: 768px)" srcset="img/kinvasoft.png">
+        <img class="page-footer__img" src="img/kinvasoft-mobile.png" alt="Kinvasoft">
+      </picture>
+    </footer>
+    <!--Окно с формой-->
+    <div class="modal-cost" id="myModal">
+      <div class="modal-cost__box">
+        <button class="modal-cost__close" type="button" aria-label="Закрыть"></button>
+
+        <div class="modal-cost__block">
+          <h2 class="title title__cost--modal">Экспресс расчет стоимости</h2>
+          <p class="modal-cost__text cost__text">Специалист подберет для вас транспорт за 2 минуты</p>
+          <p class="modal-cost__discount">-10%</p>
+          <p class="modal-cost__discount-text">Скидка на экономию времени нашего менеджера на следующую поездку</p>
+        </div>
+
+        <form class="modal-cost__form" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="modal-cost__form-wrap">
+            <label class="modal-cost__form-label" for="modal-cost-name">Имя</label>
+            <input class="modal-cost__form-input" type="text" id="modal-cost-name" name="modal-cost-name" placeholder="Александр" required="">
+          </div>
+
+          <div class="modal-cost__form-wrap">
+            <label class="modal-cost__form-label" for="modal-cost-phone">Телефон</label>
+            <input class="modal-cost__form-input" type="tel" id="modal-cost-phone" name="modal-cost-phone" placeholder="+7 909 453 268" required="">
+          </div>
+
+          <div class="modal-cost__form-wrap">
+            <label class="modal-cost__form-label" for="modal-cost-city">Выберите город</label>
+            <select class="modal-cost__form-select" id="modal-cost-city" name="modal-cost-city" required="">
+              <option disabled="" selected="" value="">&mdash;</option>
+              <option>Архангельск</option>
+              <option>Астрахань</option>
+              <option>Барнаул</option>
+              <option>Белгород</option>
+              <option>Брянск</option>
+              <option>Великий Новгород</option>
+              <option>Владивосток</option>
+              <option>Владикавказ</option>
+              <option>Владимир</option>
+              <option>Волгоград</option>
+              <option>Волжский</option>
+              <option>Вологда</option>
+              <option>Воронеж</option>
+              <option>Евпатория</option>
+              <option>Екатеринбург</option>
+              <option>Иваново</option>
+              <option>Ижевск</option>
+              <option>Иркутск</option>
+              <option>Казань</option>
+              <option>Калининград</option>
+              <option>Калуга</option>
+              <option>Кемерово</option>
+              <option>Керчь</option>
+              <option>Киров</option>
+              <option>Краснодар</option>
+              <option>Красноярск</option>
+              <option>Курган</option>
+              <option>Курск</option>
+              <option>Липецк</option>
+              <option>Магнитогорск</option>
+              <option>Махачкала</option>
+              <option>Москва</option>
+              <option>Мурманск</option>
+              <option>Набережные Челны</option>
+              <option>Нижний Новгород</option>
+              <option>Нижний Тагил</option>
+              <option>Новокузнецк</option>
+              <option>Новороссийск</option>
+              <option>Новосибирск</option>
+              <option>Омск</option>
+              <option>Орёл</option>
+              <option>Оренбург</option>
+              <option>Пенза</option>
+              <option>Пермь</option>
+              <option>Петрозаводск</option>
+              <option>Псков</option>
+              <option>Ростов-на-Дону</option>
+              <option>Рязань</option>
+              <option>Самара</option>
+              <option>Санкт-Петербург</option>
+              <option>Саранск</option>
+              <option>Саратов</option>
+              <option>Севастополь</option>
+              <option>Симферополь</option>
+              <option>Смоленск</option>
+              <option>Сочи</option>
+              <option>Ставрополь</option>
+              <option>Сургут</option>
+              <option>Тверь</option>
+              <option>Тольятти</option>
+              <option>Томск</option>
+              <option>Тула</option>
+              <option>Тюмень</option>
+              <option>Улан-Удэ</option>
+              <option>Ульяновск</option>
+              <option>Уфа</option>
+              <option>Феодосия</option>
+              <option>Хабаровск</option>
+              <option>Чебоксары</option>
+              <option>Челябинск</option>
+              <option>Череповец</option>
+              <option>Чита</option>
+              <option>Якутск</option>
+              <option>Ялта</option>
+              <option>Ярославль</option>
+            </select>
+          </div>
+
+          <div class="modal-cost__form-wrap">
+            <label class="modal-cost__form-label" for="modal-cost-transport">Выберите транспорт</label>
+            <select class="modal-cost__form-select" id="modal-cost-transport" name="modal-cost-transport" required="">
+              <option disabled="" selected="" value="">&mdash;</option>
+              <option>Toyota Alphard</option>
+              <option>Мерседес Viano</option>
+              <option>Mercedes Benz Vito</option>
+              <option>Газель</option>
+              <option>Mercedes Istana</option>
+              <option>Газель Next</option>
+            </select>
+          </div>
+
+          <div class="modal-cost__form-wrap">
+            <label class="modal-cost__form-label" for="modal-cost-datetime">Напишите дату и время</label>
+            <input class="modal-cost__form-input" type="datetime-local" value="2019-07-05T08:00" min="2019-01-01T00:00" max="2019-12-31T00:00" id="modal-cost-datetime" name="modal-cost-datetime" required="">
+          </div>
+
+          <input class="modal-cost__form-check-in" type="checkbox" id="modal-cost-check" name="modal-cost-check" required="">
+          <label class="modal-cost__form-label modal-cost__form-check" for="modal-cost-check">Согласен с обработкой данных</label>
+
+          <button class="btn btn__form btn__form--modal btn__modal-payment" type="submit">Получить расчет</button>
+          <p class="modal-cost__form-text-min">Вам перезвонят в течение 2х минут – 24/7</p>
+        </form>
+      </div>
+    </div>
+    <!--Окно подтверждения-->
+    <div class="modal-payment">
+      <div class="modal-payment__box">
+        <button class="modal-payment__close" type="button" aria-label="Закрыть"></button>
+
+        <div class="modal-payment__yellow">
+          <p class="modal-payment__yellow-text">Спасибо!</p>
+          <p class="modal-payment__yellow-text">Ваша заявка принята.</p>
+        </div>
+
+        <div class="modal-payment__blue">
+          <p class="modal-payment__blue-text">Менеджер уже приступил к расчету стоимости Вашей поездки!</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="vendor/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/modernizr-1.7.min.js"></script>
+  </body>
+</html>
